@@ -20,7 +20,7 @@
 }
 
 body {
-	--orange: #fda929;
+	--orange: orange;
 	--asphalt: #373d42;
 	--border-1: 1px solid var(--orange);
 	--border-12: 12px solid var(--orange);
@@ -105,12 +105,20 @@ span {
 	align-items: flex-end;
 }
 
+.headers > div + div {
+	position: absolute;
+	top: unset;
+	bottom: 25px;
+	right: 100px;
+}
+
 .headers h1,
 .headers h2 {
 	font-family: 'Rubik Distressed', cursive;
 	font-weight: 400;
+	letter-spacing: -2px;
 	text-transform: capitalize;
-	color: white;
+	color: var(--orange);
 	visibility: hidden;
 }
 
@@ -122,9 +130,14 @@ span {
 	font-size: 5rem;
 }
 
-.headers h1,
-.headers h2:last-child {
-	color: var(--orange);
+.headers .hq,
+.headers .h24 {
+	color: gainsboro;
+}
+
+.headers .phone {
+	font-size: 7rem;
+	visibility: visible;
 }
 
 
@@ -172,10 +185,10 @@ span {
 
 @keyframes callButtonSlideInFromBottom {
 	0% {
-		transform: translateY(100%) rotate(5deg);
+		transform: translateY(100%);
 	}
 	100% {
-		transform: translateY(0) rotate(5deg);
+		transform: translateY(0);
 	}
 }
 
@@ -189,3 +202,6 @@ span {
 		opacity: 1;
 	}
 }
+
+
+/*--------------------------------------------------------------------------------------Responsiveness */

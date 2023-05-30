@@ -48,67 +48,43 @@ main h3::after {
 /*--------------------------------------------------------------------------------------Call Button */
 .call__button {
     position: absolute;
-    bottom: 80px;
+    bottom: 220px;
     right: 380px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: rotate(5deg);
     transform-origin: bottom center;
     perspective: 1000px;
     visibility: hidden;
 }
 
-.rhombus,
-.rect {
+.road_sign {
     display: flex;
     align-items: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    transition: transform 0.4s ease;
-}
-
-.rhombus {
     height: 260px;
     width: 260px;
     background-image: url('../assets/img/yellow-road-sign-rhomb.png');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     transform: rotate(45deg);
+    transition: transform 0.4s ease;
+    cursor: pointer;
     z-index: 1;
 }
 
-.rect {
-    position: relative;
-    bottom: 20px;
-    justify-content: center;
-    height: 120px;
-    width: 348px;
-    background-image: url('../assets/img/yellow-road-sign-rect.png');
-    background-size: 100%;
-    z-index: 2;
-}
-
-.call__button:hover .rhombus {
-    transform: rotate(45deg) rotate3d(1,1,0, -30deg);
-}
-
-.call__button:hover .rect {
-    transform: rotate(10deg) rotate3d(0,1,0, -30deg);
+.call__button:hover .road_sign {
+    transform: rotate(45deg) rotate3d(1,1,0,-30deg);
 }
 
 .call__button a {
     font-family: 'Rubik Distressed', cursive;
     color: black;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 2.75rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: -2px;
-}
-
-.rhombus a {
-    font-size: 38px;
     transform: rotate(-45deg);
 }
 
