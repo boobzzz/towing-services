@@ -108,8 +108,9 @@ span {
 .headers > div + div {
 	position: absolute;
 	top: unset;
-	bottom: 25px;
-	right: 100px;
+	bottom: 280px;
+	right: 320px;
+	transform: rotate(45deg);
 }
 
 .headers h1,
