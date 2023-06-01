@@ -48,8 +48,8 @@ main h3::after {
 /*--------------------------------------------------------------------------------------Call Button */
 .call__button {
     position: absolute;
-    bottom: 200px;
-    right: 250px;
+    bottom: 210px;
+    right: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -108,8 +108,8 @@ span {
 .headers > div + div {
 	position: absolute;
 	top: unset;
-	bottom: 280px;
-	right: 320px;
+	bottom: 245px;
+	right: 275px;
 	transform: rotate(45deg);
 }
 
@@ -137,7 +137,7 @@ span {
 }
 
 .headers .phone {
-	font-size: 7rem;
+	font-size: 6rem;
 	visibility: visible;
 }
 
