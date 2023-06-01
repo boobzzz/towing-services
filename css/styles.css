@@ -109,7 +109,7 @@ span {
 	position: absolute;
 	top: unset;
 	bottom: 25px;
-	right: 100px;
+	right: 170px;
 }
 
 .headers h1,
@@ -136,7 +136,7 @@ span {
 }
 
 .headers .phone {
-	font-size: 7rem;
+	font-size: 6rem;
 	visibility: visible;
 }
 
