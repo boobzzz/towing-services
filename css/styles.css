@@ -1,8 +1,9 @@
 @import url("reset.css");
 @import url("header.css");
+@import url("parallax.css");
 @import url("main.css");
-@import url("footer.css");
 @import url("slideshow.css");
+@import url("footer.css");
 
 
 /* Fonts */
@@ -20,7 +21,10 @@
 }
 
 body {
+	--white: floralwhite;
 	--orange: orange;
+	--gold: gold;
+	--black: #262626;
 	--asphalt: #373d42;
 	--border-1: 1px solid var(--orange);
 	--border-12: 12px solid var(--orange);
@@ -30,13 +34,12 @@ body {
 	--rotation-koef: 1.4143;
 	--button-padding: 20px;
 	font-family: 'Montserrat', sans-serif;
-	overflow: hidden;
 }
 
 span {
 	font-weight: 500;
 	font-size: 1.5rem;
-	color: darkturquoise;
+	color: var(--white);
 }
 
 .wrapper{
@@ -44,61 +47,23 @@ span {
 }
 
 .root {
-	position: static;
-	overflow-y: scroll;
+	height: 100vh;
+	overflow-y: auto;
 	overflow-x: hidden;
 	perspective: 100px;
-}
-
-.container {
-	position: relative;
-	max-height: 100vh;
 	transform-style: preserve-3d;
-}
-
-.main-bg {
-	position: absolute;
-	bottom: 306%;
-	width: 100vw;
-	transform: translateZ(-100px) scale(2);
-}
-
-.main-bg img {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-}
-
-
-/*--------------------------------------------------------------------------------------Truck */
-.truck {
-	position: absolute;
-	width: 100%;
-	height: 100vh;
-	transform: translateZ(-50px) scale(1.5);
-}
-
-.truck > div {
-	position: absolute;
-	left: -40px;
-	bottom: -70px;
-}
-
-.truck img {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
 }
 
 
 /*--------------------------------------------------------------------------------------Hook */
 .hook {
 	position: fixed;
-	bottom: 50px; right: 50px;
+	bottom: 50px;
+	right: 50px;
 	width: 90px;
 	height: 100vh;
 	transform: translateY(-100%);
-	z-index: 90;
+	z-index: 100;
 }
 
 .hit-area {
@@ -117,21 +82,6 @@ span {
 }
 
 
-/*--------------------------------------------------------------------------------------Animations */
-@keyframes truckSlideInFromLeft {
-	0% {
-		transform: translateX(-100%);
-		opacity: 0;
-	}
-	60% {
-		opacity: 1;
-	}
-	100% {
-		transform: translateX(0);
-	}
-}
-
-
 /*--------------------------------------------------------------------------------------Responsiveness */
 @media (min-width: 360px) and (max-width: 575px) {
 	span {
@@ -141,31 +91,12 @@ span {
 	.wrapper{
 		padding: 0 10px;
 	}
-	.main-bg {
-		bottom: -86%;
-	}
-	.truck {
-		top: 50px;
-	}
-	.truck > div {
-		position: unset;
-	}
-	.truck img {
-		width: 95%;
-		height: 95%;
-	}
 	.hook {
 		right: 10px;
 		width: 30px;
 	}
 	.hit-area {
 		height: 100px;
-	}
-}
-
-@media (min-height: 600px) and (max-height: 680px) {
-	.truck {
-		width: 90%;
 	}
 }
 

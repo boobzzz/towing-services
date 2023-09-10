@@ -50,7 +50,7 @@ button {
     position: absolute;
     font-size: 80px;
     color: var(--orange);
-    animation: pulsation 2.5s ease-out;
+    animation: arrowPulsation 2.5s ease-out;
     animation-iteration-count: infinite;
 }
 
@@ -81,7 +81,8 @@ button {
 }
 
 
-@keyframes pulsation {
+/*--------------------------------------------------------------------------------------Animations */
+@keyframes arrowPulsation {
     0% {
         opacity: 0;
     }

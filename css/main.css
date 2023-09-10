@@ -38,97 +38,6 @@ main h3::after {
 }
 
 
-/*--------------------------------------------------------------------------------------Home */
-.home {
-    position: relative;
-    isolation: isolate;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.info-panel {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 180px 100px 10px 0;
-}
-
-.headers {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.headers h1,
-.headers h2 {
-    font-family: 'Rubik Distressed', cursive;
-    font-weight: 400;
-    text-transform: capitalize;
-    color: white;
-    visibility: hidden;
-}
-
-.headers h1,
-.phone h2 {
-    font-size: 7rem;
-    color: var(--orange);
-}
-
-.headers h2 {
-    font-size: 5rem;
-}
-
-.phone {
-    visibility: hidden;
-}
-
-.phone h2 {
-    font-family: 'Rubik Distressed', cursive;
-    font-weight: 400;
-    text-transform: capitalize;
-    color: var(--orange);
-}
-
-.call-button {
-    margin-right: 300px;
-    margin-bottom: 50px;
-    perspective: 1000px;
-    visibility: hidden;
-}
-
-.call-button a {
-    font-family: 'Rubik Distressed', cursive;
-    color: black;
-    font-weight: 400;
-    font-size: 36px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-}
-
-.road-sign {
-    height: 260px;
-    width: 260px;
-    display: flex;
-    align-items: center;
-    background-image: url('../assets/img/yellow-road-sign-rhomb.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transform: rotate(45deg);
-    transition: transform 0.4s ease;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.road-sign a {
-    font-size: 38px;
-    transform: rotate(-45deg);
-}
-
-
 /*--------------------------------------------------------------------------------------Gallery */
 .gallery {
     position: relative;
@@ -148,9 +57,9 @@ main h3::after {
 }
 
 .gallery h3::after {
-    bottom: -100px; left: -49px;
+    bottom: -50px; left: -49px;
     width: 50px;
-    height: 100px;
+    height: 50px;
     border-left: none;
     border-right: var(--border-1);
 }
@@ -161,6 +70,16 @@ main h3::after {
     position: relative;
     isolation: isolate;
     height: 640px;
+}
+
+.services::before {
+    content: "";
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    background-image: url("../assets/img/main-bg.png");
+    background-position: top center;
+    background-size: cover;
 }
 
 .services h3 {
@@ -230,7 +149,7 @@ main h3::after {
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.65);
+    background-color: rgba(0,0,0,0.6);
     z-index: 0;
 }
 
@@ -282,7 +201,7 @@ main h3::after {
     background-repeat: repeat-x;
     background-position: left;
     background-size: contain;
-    filter: brightness(0.3);
+    filter: brightness(0.4);
 }
 
 .testimonials h3 {
@@ -296,9 +215,9 @@ main h3::after {
 }
 
 .testimonials h3::after {
-    bottom: -100px; left: -49px;
+    bottom: -50px; left: -49px;
     width: 50px;
-    height: 100px;
+    height: 50px;
     border-left: none;
     border-right: var(--border-1);
 }
@@ -317,9 +236,13 @@ main h3::after {
 
 .testimonials_item {
     display: flex;
-    border-top-left-radius: 80px;
     background-color: rgba(255,255,255,0.1);
-    backdrop-filter: blur(4px);
+    border-top: var(--border-1);
+    border-bottom: var(--border-1);
+    border-right: var(--border-1);
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    backdrop-filter: blur(3px);
 }
 
 .testimonials_item::before {
@@ -327,11 +250,11 @@ main h3::after {
     display: block;
     position: absolute;
     bottom: 0; right: 0;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     border-right: var(--border-24);
     border-bottom: var(--border-24);
-    box-sizing: content-box;
+    border-bottom-right-radius: 60px;
 }
 
 .testimonials_img {
@@ -340,7 +263,7 @@ main h3::after {
     flex-shrink: 0;
     width: 150px;
     height: 150px;
-    border-top-left-radius: 50%;
+    border-top-left-radius: 60px;
     overflow: hidden;
 }
 
@@ -353,7 +276,7 @@ main h3::after {
     height: 100%;
     border-left: var(--border-24);
     border-top: var(--border-24);
-    border-top-left-radius: 50%;
+    border-top-left-radius: 60px;
 }
 
 .testimonials_item img {
@@ -370,99 +293,10 @@ main h3::after {
 }
 
 
-/*--------------------------------------------------------------------------------------Animations */
-@keyframes infoSlideInFromTop {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes phoneSlideInFromBottom {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes callButtonScaleUp {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes roadSignRotationOnLoad {
-    0% {
-        transform: rotate(665deg);
-    }
-    100% {
-        transform: rotate(45deg);
-    }
-}
-
-@keyframes roadSignRotationOnTap {
-    0% {
-        transform: rotate(45deg) scale(1);
-    }
-    50% {
-        transform: rotate(45deg) scale(0.9);
-    }
-    100% {
-        transform: rotate(45deg) scale(1);
-    }
-}
-
-
 /*--------------------------------------------------------------------------------------Responsiveness */
 @media (min-width: 360px) and (max-width: 575px) {
     main h3 {
         font-size: 2.5rem;
-    }
-    .home {
-        align-items: flex-end;
-    }
-    .info-panel {
-        padding: 0;
-        padding-bottom: 10px;
-        height: 60%;
-        align-items: center;
-    }
-    .headers {
-        align-items: center;
-    }
-    .headers h1 {
-        font-size: 3.5rem;
-        text-align: center;
-    }
-    .headers h2 {
-        margin-top: 10px;
-        font-size: 2rem;
-    }
-    .phone h2 {
-        font-size: 2.5rem;
-    }
-    .call-button {
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-    .call-button a {
-        font-size: 1.5rem;
-        letter-spacing: -1px;
-    }
-    .road-sign {
-        height: 150px;
-        width: 150px;
     }
     .gallery h3 {
         left: 10px;
@@ -540,45 +374,6 @@ main h3::after {
     }
     .testimonials_span {
         padding: 12px 24px 12px 12px;
-    }
-}
-
-@media (min-height: 600px) and (max-height: 680px) {
-    .call-button a {
-        font-size: 1.15rem;
-    }
-    .road-sign {
-        height: 110px;
-        width: 110px;
-    }
-}
-
-@media (min-width: 375px) and (max-height: 680px) {
-    .call-button a {
-        font-size: 1.25rem;
-    }
-    .road-sign {
-        height: 120px;
-        width: 120px;
-    }
-}
-
-@media (min-width: 390px) and (max-width: 575px) {
-    .headers h1 {
-        font-size: 4rem;
-    }
-    .headers h2 {
-        font-size: 2.5rem;
-    }
-    .phone h2 {
-        font-size: 3rem;
-    }
-    .road-sign {
-        height: 170px;
-        width: 170px;
-    }
-    .call-button a {
-        font-size: 1.75rem;
     }
 }
 

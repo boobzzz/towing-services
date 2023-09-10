@@ -3,11 +3,10 @@ import { startHeaderAnimationSequence } from "./home.js";
 import { initSlideshow } from "./slideshow.js";
 
 const root = document.querySelector(".root");
-const home = document.querySelector(".home");
+const header = document.querySelector("header");
 const gallery = document.querySelector(".gallery");
 const services = document.querySelector(".services");
 const testimonials = document.querySelector(".testimonials");
-const footer = document.querySelector("footer");
 const hook = document.querySelector(".hook");
 const hookHitArea = document.querySelector(".hit-area");
 const sections = [gallery, services, testimonials];
@@ -42,5 +41,5 @@ sections.forEach((section) => {
 });
 
 hookHitArea.addEventListener("pointerup", () => {
-    home.scrollIntoView({ behavior: "smooth" });
+    header.scrollIntoView({ behavior: "smooth" });
 });
