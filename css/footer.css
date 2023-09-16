@@ -20,7 +20,7 @@ footer {
 
 
 /*--------------------------------------------------------------------------------------Responsiveness */
-@media (min-width: 360px) and (max-width: 575px) {
+@media (min-width: 320px) and (max-width: 575px) {
     .copyright {
         padding-top: 1px;
         height: 50px;

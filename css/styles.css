@@ -83,7 +83,7 @@ span {
 
 
 /*--------------------------------------------------------------------------------------Responsiveness */
-@media (min-width: 360px) and (max-width: 575px) {
+@media (min-width: 320px) and (max-width: 425px) {
 	span {
 		font-weight: 400;
 		font-size: 1rem;
@@ -100,18 +100,20 @@ span {
 	}
 }
 
-@media (min-width: 576px) {
-
+@media (min-width: 426px) and (max-width: 768px) {
+	.wrapper{
+		padding: 0 20px;
+	}
 }
 
-@media (min-width: 768px) {
-
+@media (min-width: 576px) and (max-width: 768px) {
+	.wrapper {
+		padding: 0 40px;
+	}
 }
 
-@media (min-width: 992px) {
-
-}
-
-@media (min-width: 1200px) {
-
+@media (min-width: 769px) and (max-width: 1200px) {
+	.wrapper {
+		padding: 0 20px;
+	}
 }

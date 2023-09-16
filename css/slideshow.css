@@ -50,7 +50,7 @@ button {
     position: absolute;
     font-size: 80px;
     color: var(--orange);
-    animation: arrowPulsation 2.5s ease-out;
+    animation: pulsation 2.5s ease-out;
     animation-iteration-count: infinite;
 }
 
@@ -59,12 +59,12 @@ button {
 }
 
 .arrow-prev i {
-    left: 120px;
+    left: 100px;
     transition: all 0.3s ease;
 }
 
 .arrow-next i {
-    right: 120px;
+    right: 100px;
     transition: all 0.3s ease;
 }
 
@@ -82,7 +82,7 @@ button {
 
 
 /*--------------------------------------------------------------------------------------Animations */
-@keyframes arrowPulsation {
+@keyframes pulsation {
     0% {
         opacity: 0;
     }
@@ -96,33 +96,71 @@ button {
 
 
 /*--------------------------------------------------------------------------------------Responsiveness */
-@media (min-width: 360px) and (max-width: 575px) and (orientation: portrait) {
+@media (min-width: 320px) and (max-width: 576px) {
+    .slideshow::before,
+    .slideshow::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+    }
+    .slideshow::before {
+        background-image: url("../assets/img/device-rotate.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: pulsation 2.5s ease-in-out;
+        animation-iteration-count: infinite;
+        z-index: 9;
+    }
+    .slideshow::after {
+        background-color: rgba(0,0,0,0.5);
+        z-index: 8;
+    }
     .cover {
-        background-position: top;
         height: 75vh;
     }
 }
 
-@media (min-width: 360px) and (max-width: 575px) and (orientation: landscape) {
+@media (min-width: 577px) and (max-width: 1400px) {
     .cover {
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
+        height: 430px;
+    }
+    .arrow i {
+        font-size: 40px;
+    }
+    .arrow-prev i {
+        left: 10px;
+    }
+    .arrow-next i {
+        right: 10px;
+    }
+    .arrow-prev:hover i {
+        transform: translateX(0);
+    }
+
+    .arrow-next:hover i {
+        transform: translateX(0);
     }
 }
 
-@media (min-width: 576px) {
-
+@media (min-width: 769px) and (max-width: 1400px) {
+    .cover {
+        height: 600px;
+    }
+    .arrow i {
+        font-size: 60px;
+    }
+    .arrow-prev i {
+        left: 20px;
+    }
+    .arrow-next i {
+        right: 20px;
+    }
 }
 
-@media (min-width: 768px) {
-
-}
-
-@media (min-width: 992px) {
-
-}
-
-@media (min-width: 1200px) {
-
+@media (min-width: 1025px) and (max-width: 1400px) {
+    .cover {
+        height: 720px;
+    }
 }
