@@ -51,6 +51,6 @@ roadSign.addEventListener("pointerup", (e) => {
     roadSign.style.animation = `${animationDutation / 4}s ease-out 0s 1 roadSignRotationOnTap`;
 });
 
-roadSign.onanimationend = () => {
-    roadSign.style.animation = "";
-}
+// roadSign.onanimationend = () => {
+//     roadSign.style.animation = "";
+// }

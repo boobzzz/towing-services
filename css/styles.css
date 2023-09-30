@@ -59,7 +59,7 @@ span {
 /*--------------------------------------------------------------------------------------Hook */
 .hook {
 	position: fixed;
-	bottom: 50px;
+	bottom: 0;
 	right: 50px;
 	width: 90px;
 	height: 100vh;

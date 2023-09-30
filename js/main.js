@@ -1,5 +1,5 @@
 import "./header.js";
-import { startHeaderAnimationSequence } from "./home.js";
+import { startHeaderAnimationSequence } from "./parallax.js";
 import { initSlideshow } from "./slideshow.js";
 
 const root = document.querySelector(".root");
@@ -13,28 +13,18 @@ const sections = [gallery, services, testimonials];
 let hookInitialTranslateY = 0;
 
 window.addEventListener("load", () => {
-    setHookInitialTranslateY();
+    setHookInitialTranslateY(hook);
     startHeaderAnimationSequence();
     initSlideshow();
 });
 
 screen.orientation.addEventListener("change", () => {
-    setHookInitialTranslateY();
+    setHookInitialTranslateY(hook);
+    root.scroll(0, root.scrollTop - 1);
 });
 
-function setHookInitialTranslateY() {
-    hookInitialTranslateY = getTranslateY(hook);
-}
-
-function getTranslateY(element) {
-    const style = window.getComputedStyle(element);
-    const matrix = new DOMMatrixReadOnly(style.transform);
-    return matrix.m42;
-}
-
 root.addEventListener("scroll", () => {
-    const currentTranslateY = (root.scrollTop / (root.scrollHeight + hookInitialTranslateY)) * 100;
-    hook.style.transform = `translateY(${currentTranslateY - 100}%)`;
+    setHookTranslateYOnScroll();
 });
 
 sections.forEach((section) => {
@@ -47,3 +37,12 @@ sections.forEach((section) => {
 hookHitArea.addEventListener("pointerup", () => {
     header.scrollIntoView({ behavior: "smooth" });
 });
+
+function setHookInitialTranslateY(element) {
+    hookInitialTranslateY = screen.height;
+}
+
+function setHookTranslateYOnScroll() {
+    const currentTranslateY = (root.scrollTop / (root.scrollHeight - hookInitialTranslateY)) * 100;
+    hook.style.transform = `translateY(${currentTranslateY - 100}%)`;
+}
