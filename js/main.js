@@ -10,16 +10,13 @@ const testimonials = document.querySelector(".testimonials");
 const hook = document.querySelector(".hook");
 const hookHitArea = document.querySelector(".hit-area");
 const sections = [gallery, services, testimonials];
-let hookInitialTranslateY = 0;
 
 window.addEventListener("load", () => {
-    setHookInitialTranslateY(hook);
     startHeaderAnimationSequence();
     initSlideshow();
 });
 
 screen.orientation.addEventListener("change", () => {
-    setHookInitialTranslateY(hook);
     root.scroll(0, root.scrollTop - 1);
 });
 
@@ -38,12 +35,8 @@ hookHitArea.addEventListener("pointerup", () => {
     header.scrollIntoView({ behavior: "smooth" });
 });
 
-function setHookInitialTranslateY(element) {
-    hookInitialTranslateY = screen.height;
-}
-
 function setHookTranslateYOnScroll() {
-    const currentTranslateY = (root.scrollTop / (root.scrollHeight - hookInitialTranslateY)) * 100;
+    const currentTranslateY = (root.scrollTop / (root.scrollHeight - window.innerHeight)) * 100;
     if (currentTranslateY <= 100) {
         hook.style.transform = `translateY(${currentTranslateY - 100}%)`;
     }
