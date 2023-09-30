@@ -59,7 +59,7 @@ span {
 /*--------------------------------------------------------------------------------------Hook */
 .hook {
 	position: fixed;
-	bottom: 50px;
+	bottom: 0;
 	right: 50px;
 	width: 90px;
 	height: 100vh;
@@ -94,7 +94,7 @@ span {
 	}
 	.hook {
 		right: 10px;
-		width: 30px;
+		width: 35px;
 	}
 	.hit-area {
 		height: 100px;
@@ -104,10 +104,6 @@ span {
 @media (min-width: 425px) and (max-width: 1200px) {
 	.wrapper{
 		padding: 0 20px;
-	}
-	.hook {
-		right: 10px;
-		width: 35px;
 	}
 }
 
