@@ -18,6 +18,10 @@ window.addEventListener("load", () => {
     initSlideshow();
 });
 
+screen.orientation.addEventListener("change", () => {
+    setHookInitialTranslateY();
+});
+
 function setHookInitialTranslateY() {
     hookInitialTranslateY = getTranslateY(hook);
 }
