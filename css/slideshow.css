@@ -109,6 +109,7 @@ button {
         background-image: url("../assets/img/device-rotate.png");
         background-repeat: no-repeat;
         background-position: center;
+        background-size: 20%;
         animation: pulsation 2.5s ease-in-out;
         animation-iteration-count: infinite;
         z-index: 9;
@@ -122,7 +123,7 @@ button {
     }
 }
 
-@media (min-width: 577px) and (max-width: 1400px) {
+@media (min-width: 576px) and (max-width: 1400px) {
     .cover {
         height: 430px;
     }
@@ -138,13 +139,12 @@ button {
     .arrow-prev:hover i {
         transform: translateX(0);
     }
-
     .arrow-next:hover i {
         transform: translateX(0);
     }
 }
 
-@media (min-width: 769px) and (max-width: 1400px) {
+@media (min-width: 768px) and (max-width: 1400px) {
     .cover {
         height: 600px;
     }
@@ -159,8 +159,16 @@ button {
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1400px) {
+@media (min-width: 1024px) and (max-width: 1400px) {
     .cover {
         height: 720px;
+    }
+}
+
+
+/*--------------------------------------------------------------------------------------Responsiveness landscape */
+@media (min-width: 576px) and (max-width: 1024px) and (orientation: landscape) {
+    .cover {
+        height: 95vh;
     }
 }

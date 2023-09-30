@@ -23,6 +23,7 @@
 body {
 	--white: floralwhite;
 	--orange: orange;
+	--red: #f04028;
 	--gold: gold;
 	--black: #262626;
 	--asphalt: #373d42;
@@ -100,9 +101,13 @@ span {
 	}
 }
 
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 425px) and (max-width: 1200px) {
 	.wrapper{
 		padding: 0 20px;
+	}
+	.hook {
+		right: 10px;
+		width: 35px;
 	}
 }
 
@@ -110,10 +115,31 @@ span {
 	.wrapper {
 		padding: 0 40px;
 	}
+	.hook {
+		right: 20px;
+		width: 40px;
+	}
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
 	.wrapper {
 		padding: 0 20px;
+	}
+	.hook {
+		width: 50px;
+	}
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+	.hook {
+		right: 30px;
+		width: 60px;
+	}
+}
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+	.hook {
+		right: 30px;
+		width: 70px;
 	}
 }

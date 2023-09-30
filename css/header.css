@@ -14,8 +14,8 @@ header .wrapper {
 }
 
 .logo {
-    width: 220px;
-    height: 220px;
+    width: 240px;
+    height: 240px;
 }
 
 .logo img {
@@ -227,7 +227,7 @@ header .wrapper {
     }
 }
 
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 425px) and (max-width: 768px) {
     header .wrapper {
         padding-top: 20px;
     }
@@ -235,12 +235,6 @@ header .wrapper {
         width: 140px;
         height: 140px;
     }
-    .menu-item:last-child::after {
-        background-position: center;
-    }
-}
-
-@media (min-width: 426px) and (max-width: 768px) {
     .menu-toggle {
         height: 39px;
         width: 44px;
@@ -255,9 +249,18 @@ header .wrapper {
     .menu-toggle-bar--bottom {
         transform: translate(0, 12px);
     }
+    .menu-item:last-child::after {
+        background-position: center;
+    }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 576px) and (max-width: 1024px) {
+    .menu-list {
+        padding: 0 20%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
     header .wrapper {
         padding: 20px 20px 0 20px;
     }
@@ -281,7 +284,7 @@ header .wrapper {
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
     header .wrapper {
         padding: 40px 40px 0 40px;
     }
@@ -298,7 +301,7 @@ header .wrapper {
     }
 }
 
-@media (min-width: 1201px) and (max-width: 1400px) {
+@media (min-width: 1200px) and (max-width: 1500px) {
     header .wrapper {
         padding: 40px 40px 0 40px;
     }
@@ -307,11 +310,41 @@ header .wrapper {
     }
 }
 
-@media (min-width: 1401px) and (max-width: 1500px) {
-    header .wrapper {
-        padding: 40px 40px 0 40px;
-    }
+@media (min-width: 1400px) and (max-width: 1500px) {
     .menu-item {
         padding:  0 54px;
+    }
+}
+
+
+/*--------------------------------------------------------------------------------------Responsiveness landscape */
+@media (min-width: 576px) and (max-width: 1024px) and (orientation: landscape) {
+    header .wrapper {
+        padding: 20px 20px 0 20px;
+    }
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+    .menu-toggle {
+        height: 26px;
+        width: 29px;
+    }
+    .menu-toggle-bar {
+        height: 4px;
+        border-radius: 4px;
+    }
+    .menu-toggle-bar--top {
+        transform: translate(0, -8px);
+    }
+    .menu-toggle-bar--bottom {
+        transform: translate(0, 8px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .logo {
+        width: 120px;
+        height: 120px;
     }
 }

@@ -39,6 +39,7 @@
 
 /*--------------------------------------------------------------------------------------Info-panel */
 .info-panel {
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -84,7 +85,9 @@
 }
 
 .call-button {
-    margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 50px;
     visibility: hidden;
 }
@@ -100,6 +103,7 @@
 }
 
 .road-sign {
+    margin-bottom: 100px;
     height: 260px;
     width: 260px;
     display: flex;
@@ -167,10 +171,10 @@
 
 @keyframes roadSignRotationOnLoad {
     0% {
-        transform: rotate(665deg);
+        transform: rotate(665deg) scale(0);
     }
     100% {
-        transform: rotate(45deg);
+        transform: rotate(45deg) scale(1);
     }
 }
 
@@ -230,12 +234,13 @@
         letter-spacing: -1px;
     }
     .road-sign {
+        margin-bottom: 30px;
         height: 120px;
         width: 120px;
     }
 }
 
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 425px) and (max-width: 768px) {
     .parallax-container {
         justify-content: flex-end;
     }
@@ -292,12 +297,13 @@
         font-size: 2rem;
     }
     .road-sign {
+        margin-bottom: 40px;
         height: 200px;
         width: 200px;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
     .truck img {
         filter: brightness(0.7);
     }
@@ -323,50 +329,130 @@
     }
 }
 
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1400px) {
     .truck img {
         filter: brightness(0.7);
     }
     .info-panel {
-        padding: 160px 20px 20px 20px;
+        padding: 210px 40px 40px 40px;
+    }
+    .call-button {
+        margin-bottom: 100px;
     }
     .call-button a {
         font-size: 2rem;
     }
     .road-sign {
+        margin-bottom: 50px;
         height: 200px;
         width: 200px;
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1400px) {
+@media (min-width: 1400px) and (max-width: 1500px) {
     .truck img {
         filter: brightness(0.7);
     }
     .info-panel {
         padding: 160px 40px 40px 40px;
     }
-    .call-button {
-        align-self: center;
-        margin-right: 0;
-        margin-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------------------------------Responsiveness landscape */
+@media (min-width: 576px) and (max-width: 1024px) and (orientation: landscape) {
+    .parallax-container {
+        flex-direction: unset;
+        justify-content: unset;
+    }
+    .truck {
+        width: 50%;
+        left: 0;
+    }
+    .truck > div {
+        position: absolute;
+        bottom: -57px;
+    }
+    .info-panel {
+        flex-direction: row;
+        align-items: center;
+        padding: 60px 20px 0 20px;
+    }
+    .headers {
+        align-items: flex-start;
     }
     .headers h1 {
-        font-size: 6rem;
+        font-size: 3rem;
+        text-align: unset;
+    }
+    .headers h2 {
+        align-self: unset;
+        font-size: 2rem;
+    }
+    .call-button {
+        align-self: flex-end;
+        margin: 32px 0;
     }
     .phone {
         align-self: center;
     }
     .phone h2 {
-        font-size: 6rem;
+        font-size: 2rem;
+        white-space: nowrap;
+    }
+    .call-button a {
+        font-size: 1.25rem;
+    }
+    .road-sign {
+        margin-bottom: 30px;
+        height: 120px;
+        width: 120px;
     }
 }
 
-@media (min-width: 1401px) and (max-width: 1500px) {
-    .truck img {
-        filter: brightness(0.7);
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .truck {
+        width: 70%;
     }
+}
+
+@media (width: 1024px) and (height: 768px) and (orientation: landscape) {
+    .truck {
+        width: 100%;
+    }
+    .truck > div {
+        bottom: -69px;
+    }
+    .headers h1 {
+        font-size: 5rem;
+    }
+    .headers h2 {
+        font-size: 3rem;
+    }
+    .phone h2 {
+        font-size: 3rem;
+    }
+    .call-button a {
+        font-size: 2rem;
+    }
+    .road-sign {
+        margin-bottom: 50px;
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1400px) and (orientation: landscape) {
     .info-panel {
         padding: 160px 40px 40px 40px;
+    }
+    .call-button {
+        margin-bottom: 50px;
+    }
+    .headers h1 {
+        font-size: 5rem;
+    }
+    .phone h2 {
+        font-size: 4rem;
     }
 }

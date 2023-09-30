@@ -30,7 +30,6 @@ function playPhoneAnimation() {
 
 function playCallButtonAnimation() {
     callButton.style.visibility = "visible";
-    callButton.style.animation = `${animationDutation}s ease-out 0s 1 callButtonScaleUp`;
     roadSign.style.animation = `${animationDutation}s ease-out 0s 1 roadSignRotationOnLoad`;
 }
 
