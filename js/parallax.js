@@ -1,56 +1,53 @@
 const truck = document.querySelector(".truck > div");
-const callButton = document.querySelector(".call-button");
+const header1 = document.querySelector(".title");
+const header2 = document.querySelector(".hq");
+const header3 = document.querySelector(".h24");
 const roadSign = document.querySelector(".road-sign");
-const infoItemH1 = document.querySelector(".info-panel h1");
-const infoItemH2 = document.querySelector(".hq");
-const infoItemH3 = document.querySelector(".h24");
 const phone = document.querySelector(".phone");
-const animationDutation = 0.8;
-const halfAnimationDuration = animationDutation / 2;
+const animationDuration = 0.8;
+const halfAnimationDuration = animationDuration / 2;
 
-export function startHeaderAnimationSequence() {
-    playTruckAnimation();
+export function initParallax() {
+    truck.addEventListener('animationend', () => {
+        playMainHeaderAppearAnimation();
+        playPhoneAppearAnimation();
+    });
+    header1.addEventListener('animationend', playSubHeadersAppearAnimation);
+    header3.addEventListener('animationend', playCallButtonAppearAnimation);
+    roadSign.addEventListener("pointerup", playCallButtonOnTapAnimation);
+    playTruckAppearAnimation();
 }
 
-function playTruckAnimation() {
-    truck.style.animation = `${animationDutation}s ease-out 0s 1 truckSlideInFromLeft`;
+function playTruckAppearAnimation() {
+    truck.style.animation = getAnimationParams('truckSlideInAnimation', animationDuration);
 }
 
-function playInfoAnimation() {
-    infoItemH1.style.visibility = "visible";
-    infoItemH1.style.animation = `${halfAnimationDuration}s ease-out 0s 1 infoSlideInFromTop`;
-    infoItemH2.style.animation = `${halfAnimationDuration}s ease-out ${halfAnimationDuration}s 1 infoSlideInFromTop`;
-    infoItemH3.style.animation = `${halfAnimationDuration}s ease-out ${halfAnimationDuration}s 1 infoSlideInFromTop`;
+function playMainHeaderAppearAnimation() {
+    header1.style.visibility = "visible";
+    header1.style.animation = getAnimationParams('infoHeadersSlideInAnimation', halfAnimationDuration);
 }
 
-function playPhoneAnimation() {
+function playSubHeadersAppearAnimation() {
+    header2.style.visibility = "visible";
+    header3.style.visibility = "visible";
+    header2.style.animation = getAnimationParams('infoHeadersSlideInAnimation', halfAnimationDuration);
+    header3.style.animation = getAnimationParams('infoHeadersSlideInAnimation', halfAnimationDuration);
+}
+
+function playCallButtonAppearAnimation() {
+    roadSign.style.visibility = "visible";
+    roadSign.style.animation = getAnimationParams('callButtonAppearAnimation', animationDuration);
+}
+
+function playPhoneAppearAnimation() {
     phone.style.visibility = "visible";
-    phone.style.animation = `${animationDutation}s ease-out 0s 1 phoneSlideInFromBottom`;
+    phone.style.animation = getAnimationParams('phoneSlideInAnimation', halfAnimationDuration);
 }
 
-function playCallButtonAnimation() {
-    callButton.style.visibility = "visible";
-    roadSign.style.animation = `${animationDutation}s ease-out 0s 1 roadSignRotationOnLoad`;
+function playCallButtonOnTapAnimation() {
+    roadSign.style.animation = getAnimationParams('callButtonOnTapAnimation', animationDuration / 4);
 }
 
-truck.onanimationend = () => {
-    playInfoAnimation();
-    playPhoneAnimation();
-};
-
-infoItemH1.onanimationend = () => {
-    infoItemH2.style.visibility = "visible";
-    infoItemH3.style.visibility = "visible";
-};
-
-infoItemH3.onanimationend = () => {
-    playCallButtonAnimation();
-};
-
-roadSign.addEventListener("pointerup", (e) => {
-    roadSign.style.animation = `${animationDutation / 4}s ease-out 0s 1 roadSignRotationOnTap`;
-});
-
-// roadSign.onanimationend = () => {
-//     roadSign.style.animation = "";
-// }
+function getAnimationParams(animation, duration) {
+    return `${duration}s ease-out 0s 1 ${animation}`;
+}

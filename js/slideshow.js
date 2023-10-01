@@ -39,7 +39,7 @@ function initSlides() {
 
 function changeSlide() {
     for (const btn of btns) {
-        btn.addEventListener("pointerup", e => {
+        btn.addEventListener("pointerup", (e) => {
             const activeSlide = document.querySelector(".slide.is-active");
             activeSlide.classList.remove(isActive);
             if (e.currentTarget === nextBtn) {
@@ -75,7 +75,5 @@ function stopAutoPlayOnHover() {
 }
 
 function restoreAutoPlayOnHoverEnd() {
-    slideshow.addEventListener("pointerout", () => {
-        launchAutoPlay();
-    });
+    slideshow.addEventListener("pointerout", launchAutoPlay);
 }

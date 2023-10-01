@@ -28,6 +28,7 @@
     position: absolute;
     left: 0;
     bottom: -70px;
+    height: 100%;
 }
 
 .truck img {
@@ -39,13 +40,13 @@
 
 /*--------------------------------------------------------------------------------------Info-panel */
 .info-panel {
-    width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
     padding: 180px 100px 20px 0;
+    width: 100%;
+    height: 100vh;
 }
 
 .headers {
@@ -73,23 +74,11 @@
     font-size: 5rem;
 }
 
-.phone {
-    visibility: hidden;
-}
-
-.phone h2 {
-    font-family: 'Rubik Distressed', cursive;
-    font-weight: 400;
-    text-transform: capitalize;
-    color: var(--orange);
-}
-
 .call-button {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
-    visibility: hidden;
 }
 
 .call-button a {
@@ -116,6 +105,7 @@
     transition: transform 0.4s ease;
     cursor: pointer;
     z-index: 1;
+    visibility: hidden;
 }
 
 .road-sign a {
@@ -123,9 +113,20 @@
     transform: rotate(-45deg);
 }
 
+.phone {
+    visibility: hidden;
+}
+
+.phone h2 {
+    font-family: 'Rubik Distressed', cursive;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--orange);
+}
+
 
 /*--------------------------------------------------------------------------------------Animations */
-@keyframes truckSlideInFromLeft {
+@keyframes truckSlideInAnimation {
     0% {
         transform: translateX(-100%);
         opacity: 0;
@@ -138,7 +139,7 @@
     }
 }
 
-@keyframes infoSlideInFromTop {
+@keyframes infoHeadersSlideInAnimation {
     0% {
         transform: translateY(-100%);
         opacity: 0;
@@ -149,27 +150,7 @@
     }
 }
 
-@keyframes phoneSlideInFromBottom {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes callButtonScaleUp {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes roadSignRotationOnLoad {
+@keyframes callButtonAppearAnimation {
     0% {
         transform: rotate(665deg) scale(0);
     }
@@ -178,7 +159,7 @@
     }
 }
 
-@keyframes roadSignRotationOnTap {
+@keyframes callButtonOnTapAnimation {
     0% {
         transform: rotate(45deg) scale(1);
     }
@@ -190,17 +171,28 @@
     }
 }
 
+@keyframes phoneSlideInAnimation {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
 /*--------------------------------------------------------------------------------------Responsiveness */
 @media (min-width: 320px) and (max-width: 768px) {
     .parallax-container {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
     }
     .truck {
         position: static;
-        height: auto;
+        height: 40vh;
         transform: none;
     }
     .truck > div {
@@ -223,9 +215,6 @@
         margin-top: 10px;
         font-size: 2rem;
     }
-    .phone h2 {
-        font-size: 2rem;
-    }
     .call-button {
         margin: 32px 0;
     }
@@ -238,6 +227,9 @@
         height: 120px;
         width: 120px;
     }
+    .phone h2 {
+        font-size: 2rem;
+    }
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
@@ -247,7 +239,7 @@
     .truck {
         position: absolute;
         bottom: 50px;
-        height: 100vh;
+        height: auto;
         transform: translateZ(-50px) scale(1.5);
     }
     .truck img {
@@ -265,9 +257,6 @@
         align-self: center;
         font-size: 3rem;
     }
-    .phone h2 {
-        font-size: 3rem;
-    }
     .call-button {
         margin: 48px 0;
     }
@@ -278,9 +267,15 @@
         height: 180px;
         width: 180px;
     }
+    .phone h2 {
+        font-size: 3rem;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
+    .truck {
+        bottom: -200px;
+    }
     .info-panel {
         padding: 20px 40px;
     }
@@ -290,9 +285,6 @@
     .headers h2 {
         font-size: 4rem;
     }
-    .phone h2 {
-        font-size: 4rem;
-    }
     .call-button a {
         font-size: 2rem;
     }
@@ -300,6 +292,9 @@
         margin-bottom: 40px;
         height: 200px;
         width: 200px;
+    }
+    .phone h2 {
+        font-size: 4rem;
     }
 }
 
@@ -366,7 +361,8 @@
         justify-content: unset;
     }
     .truck {
-        width: 50%;
+        width: 70%;
+        height: 100vh;
         left: 0;
     }
     .truck > div {
@@ -393,13 +389,6 @@
         align-self: flex-end;
         margin: 32px 0;
     }
-    .phone {
-        align-self: center;
-    }
-    .phone h2 {
-        font-size: 2rem;
-        white-space: nowrap;
-    }
     .call-button a {
         font-size: 1.25rem;
     }
@@ -407,6 +396,13 @@
         margin-bottom: 30px;
         height: 120px;
         width: 120px;
+    }
+    .phone {
+        align-self: center;
+    }
+    .phone h2 {
+        font-size: 2rem;
+        white-space: nowrap;
     }
 }
 
@@ -429,9 +425,6 @@
     .headers h2 {
         font-size: 3rem;
     }
-    .phone h2 {
-        font-size: 3rem;
-    }
     .call-button a {
         font-size: 2rem;
     }
@@ -440,17 +433,20 @@
         height: 200px;
         width: 200px;
     }
+    .phone h2 {
+        font-size: 3rem;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1400px) and (orientation: landscape) {
     .info-panel {
         padding: 160px 40px 40px 40px;
     }
-    .call-button {
-        margin-bottom: 50px;
-    }
     .headers h1 {
         font-size: 5rem;
+    }
+    .call-button {
+        margin-bottom: 50px;
     }
     .phone h2 {
         font-size: 4rem;
