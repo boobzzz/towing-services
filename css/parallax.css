@@ -192,7 +192,7 @@
     }
     .truck {
         position: static;
-        height: 40vh;
+        height: 35vh;
         transform: none;
     }
     .truck > div {
