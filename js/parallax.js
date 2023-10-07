@@ -8,18 +8,23 @@ const animationDuration = 0.8;
 const halfAnimationDuration = animationDuration / 2;
 
 export function initParallax() {
-    truck.addEventListener('animationend', () => {
-        playMainHeaderAppearAnimation();
-        playPhoneAppearAnimation();
-    });
+    truck.addEventListener('animationend', onTruckAnimationEnd);
+    truck.addEventListener('webkitAnimationEnd', onTruckAnimationEnd);
     header1.addEventListener('animationend', playSubHeadersAppearAnimation);
+    header1.addEventListener('webkitAnimationEnd', playSubHeadersAppearAnimation);
     header3.addEventListener('animationend', playCallButtonAppearAnimation);
+    header3.addEventListener('webkitAnimationEnd', playCallButtonAppearAnimation);
     roadSign.addEventListener("pointerup", playCallButtonOnTapAnimation);
     playTruckAppearAnimation();
 }
 
 function playTruckAppearAnimation() {
     truck.style.animation = getAnimationParams('truckSlideInAnimation', animationDuration);
+}
+
+function onTruckAnimationEnd() {
+    playMainHeaderAppearAnimation();
+    playPhoneAppearAnimation();
 }
 
 function playMainHeaderAppearAnimation() {

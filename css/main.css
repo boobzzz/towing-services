@@ -12,6 +12,7 @@ main h3 {
     text-transform: capitalize;
     letter-spacing: -1px;
     color: var(--orange);
+    z-index: 10;
 }
 
 main h3::before {
@@ -44,6 +45,7 @@ main h3::after {
     isolation: isolate;
     border-top: var(--border-1);
     border-bottom: var(--border-1);
+    background-color: #373d42;
 }
 
 .gallery h3 {
@@ -282,7 +284,6 @@ main h3::after {
     .gallery h3,
     .testimonials h3 {
         left: 10px;
-        z-index: 10;
     }
     .services {
         display: flex;
@@ -294,7 +295,6 @@ main h3::after {
         position: relative;
         top: 0;
         right: 10px;
-        z-index: 10;
     }
     .services span {
         font-size: 1rem;
