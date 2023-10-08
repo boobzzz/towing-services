@@ -22,12 +22,12 @@ export function initParallax() {
 
 function playTruckAppearAnimation() {
     if (truck.style.display !== 'none') {
-        // truck.style.display = 'block';
         truck.style.animation = getAnimationParams('truckSlideInAnimation', animationDuration);
     }
 }
 
 function onTruckAnimationEnd() {
+    truck.style.opacity = 1;
     truck.style.animation = '';
     playMainHeaderAppearAnimation();
     playPhoneAppearAnimation();
@@ -35,13 +35,11 @@ function onTruckAnimationEnd() {
 
 function playMainHeaderAppearAnimation() {
     // header1.style.visibility = "visible";
-    // header1.style.display = 'block';
     header1.style.animation = getAnimationParams('infoHeadersSlideInAnimation', halfAnimationDuration);
 }
 
 function playPhoneAppearAnimation() {
     // phone.style.visibility = "visible";
-    // phone.style.display = 'block';
     phone.style.animation = getAnimationParams('phoneSlideInAnimation', halfAnimationDuration);
 }
 
@@ -56,8 +54,6 @@ function onMainHeaderAppearAnimationEnd() {
 function playSubHeadersAppearAnimation() {
     // header2.style.visibility = "visible";
     // header3.style.visibility = "visible";
-    // header2.style.display = 'block';
-    // header3.style.display = 'block';
     header2.style.animation = getAnimationParams('infoHeadersSlideInAnimation', halfAnimationDuration);
     header3.style.animation = getAnimationParams('infoHeadersSlideInAnimation', halfAnimationDuration);
 }
@@ -72,7 +68,6 @@ function onSubHeadersAppearAnimationEnd() {
 
 function playCallButtonAppearAnimation() {
     // roadSign.style.visibility = "visible";
-    // roadSign.style.display = 'flex';
     roadSign.style.animation = getAnimationParams('callButtonAppearAnimation', animationDuration);
 }
 
