@@ -17,7 +17,7 @@ export function initParallax() {
     roadSign.addEventListener('animationend', onCallButtonAppearAnimationEnd);
     roadSign.addEventListener('webkitAnimationEnd', onCallButtonAppearAnimationEnd);
     roadSign.addEventListener("pointerup", playCallButtonOnTapAnimation);
-    playTruckAppearAnimation();
+    // playTruckAppearAnimation();
 }
 
 function playTruckAppearAnimation() {

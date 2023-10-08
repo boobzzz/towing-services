@@ -62,7 +62,7 @@
     text-transform: capitalize;
     color: var(--white);
     /*visibility: hidden;*/
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 .headers h1,
@@ -106,7 +106,7 @@
     cursor: pointer;
     z-index: 1;
     /*visibility: hidden;*/
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 .road-sign a {
@@ -115,9 +115,8 @@
 }
 
 .phone {
-    /*display: none;*/
     /*visibility: hidden;*/
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 .phone h2 {
@@ -247,8 +246,7 @@
     .headers h1,
     .headers h2 {
         /*visibility: visible;*/
-        display: block;
-        opacity: 1;
+        /*opacity: 1;*/
     }
     .call-button a {
         font-size: 1rem;
@@ -257,13 +255,11 @@
         height: 100px;
         width: 100px;
         /*visibility: visible;*/
-        display: flex;
-        opacity: 1;
+        /*opacity: 1;*/
     }
     .phone {
         /*visibility: visible;*/
-        display: block;
-        opacity: 1;
+        /*opacity: 1;*/
     }
 }
 
