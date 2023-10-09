@@ -55,7 +55,7 @@
 .info-panel h1,
 .info-panel h2,
 .info-panel span {
-    font-family: 'Rubik Distressed', cursive;
+    font-family: "Rubik Distressed", cursive;
     font-weight: 400;
     text-transform: capitalize;
     color: var(--white);
@@ -91,7 +91,7 @@
 }
 
 .call-button a {
-    font-family: 'Rubik Distressed', cursive;
+    font-family: "Rubik Distressed", cursive;
     color: black;
     font-weight: 400;
     font-size: 36px;
@@ -106,7 +106,7 @@
     /*margin-bottom: 70px;*/
     height: 260px;
     width: 260px;
-    background-image: url('../assets/img/yellow-road-sign-rhomb.png');
+    background-image: url("../assets/img/yellow-road-sign-rhomb.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
