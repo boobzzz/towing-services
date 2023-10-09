@@ -17,13 +17,17 @@ export function initParallax() {
     roadSign.addEventListener('animationend', onCallButtonAppearAnimationEnd);
     roadSign.addEventListener('webkitAnimationEnd', onCallButtonAppearAnimationEnd);
     roadSign.addEventListener("pointerup", playCallButtonOnTapAnimation);
-    // playTruckAppearAnimation();
+
+    if (window.getComputedStyle(truck).display === 'none') {
+        playMainHeaderAppearAnimation();
+        playPhoneAppearAnimation();
+    } else {
+        playTruckAppearAnimation();
+    }
 }
 
 function playTruckAppearAnimation() {
-    if (truck.style.display !== 'none') {
-        truck.style.animation = getAnimationParams('truckSlideInAnimation', animationDuration);
-    }
+    truck.style.animation = getAnimationParams('truckSlideInAnimation', animationDuration);
 }
 
 function onTruckAnimationEnd() {

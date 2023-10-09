@@ -8,10 +8,6 @@
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
-/* @import url('https://fonts.googleapis.com/css?family=Didact+Gothic:regular'); */
-/* @import url('https://fonts.googleapis.com/css?family=Rubik+Dirt:regular'); */
-/* @import url('https://fonts.googleapis.com/css?family=Rubik+Distressed:regular'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap'); */
 
 @font-face {
 	font-family: 'Rubik Distressed';
@@ -53,6 +49,7 @@ span {
 	overflow-x: hidden;
 	perspective: 100px;
 	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
 }
 
 
