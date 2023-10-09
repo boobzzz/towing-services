@@ -124,6 +124,10 @@ button {
 }
 
 @media (min-width: 576px) and (max-width: 1400px) {
+    .slideshow::before,
+    .slideshow::after {
+        content: none;
+    }
     .cover {
         height: 430px;
     }
