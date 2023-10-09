@@ -101,11 +101,11 @@
 }
 
 .road-sign {
+    display: flex;
+    align-items: center;
     margin-bottom: 70px;
     height: 260px;
     width: 260px;
-    display: flex;
-    align-items: center;
     background-image: url('../assets/img/yellow-road-sign-rhomb.png');
     background-repeat: no-repeat;
     background-position: center;
