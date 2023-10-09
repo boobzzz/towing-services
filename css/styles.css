@@ -16,10 +16,6 @@
 	src: url("../assets/fonts/RubikDistressed-Regular.ttf");
 }
 
-* {
-	/*font: -apple-system-body !important;*/
-}
-
 body {
 	--white: floralwhite;
 	--orange: orange;
