@@ -18,7 +18,7 @@ export function initParallax() {
     roadSign.addEventListener('webkitAnimationEnd', onCallButtonAppearAnimationEnd);
     roadSign.addEventListener("pointerup", playCallButtonOnTapAnimation);
 
-    if (window.getComputedStyle(truck).display === 'none') {
+    if (window.getComputedStyle(truck.parentElement).display === 'none') {
         playMainHeaderAppearAnimation();
         playPhoneAppearAnimation();
     } else {
@@ -38,12 +38,10 @@ function onTruckAnimationEnd() {
 }
 
 function playMainHeaderAppearAnimation() {
-    // header1.style.visibility = "visible";
     header1.style.animation = getAnimationParams('infoHeadersSlideInAnimation', halfAnimationDuration);
 }
 
 function playPhoneAppearAnimation() {
-    // phone.style.visibility = "visible";
     phone.style.animation = getAnimationParams('phoneSlideInAnimation', halfAnimationDuration);
 }
 
@@ -56,8 +54,6 @@ function onMainHeaderAppearAnimationEnd() {
 }
 
 function playSubHeadersAppearAnimation() {
-    // header2.style.visibility = "visible";
-    // header3.style.visibility = "visible";
     header2.style.animation = getAnimationParams('infoHeadersSlideInAnimation', halfAnimationDuration);
     header3.style.animation = getAnimationParams('infoHeadersSlideInAnimation', halfAnimationDuration);
 }
@@ -71,7 +67,6 @@ function onSubHeadersAppearAnimationEnd() {
 }
 
 function playCallButtonAppearAnimation() {
-    // roadSign.style.visibility = "visible";
     roadSign.style.animation = getAnimationParams('callButtonAppearAnimation', animationDuration);
 }
 
