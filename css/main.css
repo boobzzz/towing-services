@@ -266,6 +266,7 @@ main h3::after {
 
 .testimonials_span {
     flex-grow: 1;
+    -webkit-flex-grow: 1;
     padding: 24px 12px;
     text-align: justify;
     border-top: var(--border-1);
