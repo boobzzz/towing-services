@@ -90,16 +90,6 @@
     margin-bottom: 50px;
 }
 
-.call-button a {
-    font-family: "Rubik Distressed", cursive;
-    color: black;
-    font-weight: 400;
-    font-size: 36px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-}
-
 .road-sign {
     display: flex;
     align-items: center;
@@ -115,7 +105,13 @@
 }
 
 .road-sign a {
+    font-family: "Rubik Distressed", cursive;
+    font-weight: 400;
     font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: black;
     transform: rotate(-45deg);
 }
 
@@ -227,14 +223,14 @@
     .call-button {
         margin: 32px 0;
     }
-    .call-button a {
-        font-size: 1.25rem;
-        letter-spacing: -1px;
-    }
     .road-sign {
         margin-bottom: 30px;
         height: 120px;
         width: 120px;
+    }
+    .road-sign a {
+        font-size: 1.25rem;
+        letter-spacing: -1px;
     }
     .phone span {
         font-size: 2rem;
@@ -248,12 +244,12 @@
     .info-panel {
         padding-top: 55px;
     }
-    .call-button a {
-        font-size: 1rem;
-    }
     .road-sign {
         height: 100px;
         width: 100px;
+    }
+    .road-sign a {
+        font-size: 1rem;
     }
 }
 
@@ -285,12 +281,12 @@
     .call-button {
         margin: 48px 0;
     }
-    .call-button a {
-        font-size: 1.8rem;
-    }
     .road-sign {
         height: 180px;
         width: 180px;
+    }
+    .road-sign a {
+        font-size: 1.8rem;
     }
     .phone span {
         font-size: 3rem;
@@ -310,13 +306,13 @@
     .headers h2 {
         font-size: 4rem;
     }
-    .call-button a {
-        font-size: 2rem;
-    }
     .road-sign {
         margin-bottom: 40px;
         height: 200px;
         width: 200px;
+    }
+    .road-sign a {
+        font-size: 2rem;
     }
     .phone span {
         font-size: 4rem;
@@ -359,13 +355,13 @@
     .call-button {
         margin-bottom: 100px;
     }
-    .call-button a {
-        font-size: 2rem;
-    }
     .road-sign {
         margin-bottom: 50px;
         height: 200px;
         width: 200px;
+    }
+    .road-sign a {
+        font-size: 2rem;
     }
 }
 
@@ -414,13 +410,13 @@
         align-self: flex-end;
         margin: 32px 0;
     }
-    .call-button a {
-        font-size: 1.25rem;
-    }
     .road-sign {
         margin-bottom: 30px;
         height: 120px;
         width: 120px;
+    }
+    .road-sign a {
+        font-size: 1.25rem;
     }
     .phone {
         align-self: center;
@@ -450,13 +446,13 @@
     .headers h2 {
         font-size: 3rem;
     }
-    .call-button a {
-        font-size: 2rem;
-    }
     .road-sign {
         margin-bottom: 50px;
         height: 200px;
         width: 200px;
+    }
+    .road-sign a {
+        font-size: 2rem;
     }
     .phone span {
         font-size: 3rem;
