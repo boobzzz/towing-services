@@ -103,7 +103,7 @@
 .road-sign {
     display: flex;
     align-items: center;
-    margin-bottom: 70px;
+    /*margin-bottom: 70px;*/
     height: 260px;
     width: 260px;
     background-image: url('../assets/img/yellow-road-sign-rhomb.png');
@@ -115,12 +115,16 @@
 }
 
 .road-sign a {
-    font-size: 38px;
+    font-size: 2.5rem;
     transform: rotate(-45deg);
 }
 
 .phone {
     opacity: 0;
+}
+
+.phone {
+    padding-top: 70px;
 }
 
 .phone span {
@@ -231,9 +235,12 @@
         letter-spacing: -1px;
     }
     .road-sign {
-        margin-bottom: 30px;
+        /*margin-bottom: 30px;*/
         height: 120px;
         width: 120px;
+    }
+    .phone {
+        padding-top: 30px;
     }
     .phone span {
         font-size: 2rem;
@@ -313,9 +320,12 @@
         font-size: 2rem;
     }
     .road-sign {
-        margin-bottom: 40px;
+        /*margin-bottom: 40px;*/
         height: 200px;
         width: 200px;
+    }
+    .phone {
+        padding-top: 40px;
     }
     .phone span {
         font-size: 4rem;
@@ -362,9 +372,12 @@
         font-size: 2rem;
     }
     .road-sign {
-        margin-bottom: 50px;
+        /*margin-bottom: 50px;*/
         height: 200px;
         width: 200px;
+    }
+    .phone {
+        padding-top: 50px;
     }
 }
 
@@ -417,12 +430,13 @@
         font-size: 1.25rem;
     }
     .road-sign {
-        margin-bottom: 30px;
+        /*margin-bottom: 30px;*/
         height: 120px;
         width: 120px;
     }
     .phone {
         align-self: center;
+        padding-top: 30px;
     }
     .phone span {
         font-size: 2rem;
@@ -453,9 +467,12 @@
         font-size: 2rem;
     }
     .road-sign {
-        margin-bottom: 50px;
+        /*margin-bottom: 50px;*/
         height: 200px;
         width: 200px;
+    }
+    .phone {
+        padding-top: 50px;
     }
     .phone span {
         font-size: 3rem;

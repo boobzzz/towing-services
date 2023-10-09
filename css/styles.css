@@ -23,23 +23,18 @@
 body {
 	--white: floralwhite;
 	--orange: orange;
-	--red: #f04028;
-	--gold: gold;
-	--black: #262626;
 	--asphalt: #373d42;
 	--border-1: 1px solid var(--orange);
 	--border-12: 12px solid var(--orange);
 	--border-24: 24px solid var(--orange);
 	--radius-50: 50px;
 	--radius-100: 100px;
-	--rotation-koef: 1.4143;
-	--button-padding: 20px;
 	font-family: 'Montserrat', sans-serif;
 }
 
 span {
 	font-weight: 500;
-	font-size: 7rem;
+	font-size: 1.5rem;
 	color: var(--white);
 }
 
