@@ -4,6 +4,7 @@ const header2 = document.querySelector(".hq");
 const header3 = document.querySelector(".h24");
 const roadSign = document.querySelector(".road-sign");
 const phone = document.querySelector(".phone");
+const phoneSpan = document.querySelector(".phone span");
 const animationDuration = 0.8;
 const halfAnimationDuration = animationDuration / 2;
 
@@ -77,6 +78,7 @@ function onCallButtonAppearAnimationEnd() {
 
 function playCallButtonOnTapAnimation() {
     roadSign.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
+    phoneSpan.innerHTML = '(067)888-88-88';
 }
 
 function getAnimationParams(animation, duration) {
