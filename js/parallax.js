@@ -2,9 +2,9 @@ const truck = document.querySelector(".truck > div");
 const header1 = document.querySelector(".title");
 const header2 = document.querySelector(".hq");
 const header3 = document.querySelector(".h24");
-const roadSign = document.querySelector(".road-sign");
-const phone = document.querySelector(".phone");
-const phoneSpan = document.querySelector(".phone span");
+const callButton = document.querySelector(".call-button");
+const phone = document.querySelector(".phone-number");
+const phoneSpan = document.querySelector(".phone-number span");
 const animationDuration = 0.8;
 const halfAnimationDuration = animationDuration / 2;
 
@@ -15,9 +15,9 @@ export function initParallax() {
     header1.addEventListener("webkitAnimationEnd", onMainHeaderAppearAnimationEnd);
     header3.addEventListener("animationend", onSubHeadersAppearAnimationEnd);
     header3.addEventListener("webkitAnimationEnd", onSubHeadersAppearAnimationEnd);
-    roadSign.addEventListener("animationend", onCallButtonAppearAnimationEnd);
-    roadSign.addEventListener("webkitAnimationEnd", onCallButtonAppearAnimationEnd);
-    roadSign.addEventListener("pointerup", playCallButtonOnTapAnimation);
+    callButton.addEventListener("animationend", onCallButtonAppearAnimationEnd);
+    callButton.addEventListener("webkitAnimationEnd", onCallButtonAppearAnimationEnd);
+    callButton.addEventListener("pointerup", playCallButtonOnTapAnimation);
 
     if (window.getComputedStyle(truck.parentElement).display === "none") {
         playMainHeaderAppearAnimation();
@@ -68,16 +68,17 @@ function onSubHeadersAppearAnimationEnd() {
 }
 
 function playCallButtonAppearAnimation() {
-    roadSign.style.animation = getAnimationParams("callButtonAppearAnimation", animationDuration);
+    callButton.style.animation = getAnimationParams("callButtonAppearAnimation", animationDuration);
 }
 
 function onCallButtonAppearAnimationEnd() {
-    roadSign.style.opacity = "1";
-    roadSign.style.animation = "";
+    callButton.style.opacity = "1";
+    callButton.style.animation = "";
 }
 
-function playCallButtonOnTapAnimation() {
-    roadSign.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
+function playCallButtonOnTapAnimation(e) {
+    console.log(e);
+    callButton.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
     phoneSpan.innerHTML = '(067)888-88-88';
 }
 
