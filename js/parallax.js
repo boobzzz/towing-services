@@ -79,7 +79,7 @@ function onCallButtonAppearAnimationEnd() {
 }
 
 function playCallButtonOnTapAnimation(e) {
-    e.preventDefault();
+    // e.preventDefault();
     console.log(e);
     callButton.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
     phoneSpan.innerHTML = '(067)123-45-67';
