@@ -10,7 +10,7 @@ const btns = document.querySelectorAll(".arrow");
 const nextBtn = document.querySelector(".arrow-next");
 const autoplayInterval = parseInt(slideshow.dataset.autoplayInterval) || 4000;
 const isActive = "is-active";
-const slidesCount = 9;
+const slidesCount = 11;
 let intervalID;
 
 export function initSlideshow() {
