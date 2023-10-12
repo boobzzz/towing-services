@@ -79,7 +79,7 @@ function onCallButtonAppearAnimationEnd() {
 function playCallButtonOnTapAnimation(e) {
     console.log(e);
     callButton.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
-    phoneSpan.innerHTML = '(067)888-88-88';
+    phoneSpan.innerHTML = '(067)123-45-67';
 }
 
 function getAnimationParams(animation, duration) {
