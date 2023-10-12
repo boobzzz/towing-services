@@ -3,11 +3,11 @@ const header1 = document.querySelector(".title");
 const header2 = document.querySelector(".hq");
 const header3 = document.querySelector(".h24");
 const callButton = document.querySelector(".call-button");
-const callButtonLink = document.querySelector(".call-button > a");
 const phone = document.querySelector(".phone-number");
 const phoneSpan = document.querySelector(".phone-number span");
 const animationDuration = 0.8;
 const halfAnimationDuration = animationDuration / 2;
+const phoneNumber = "+380676768998";
 
 export function initParallax() {
     truck.addEventListener("animationend", onTruckAnimationEnd);
@@ -18,8 +18,7 @@ export function initParallax() {
     header3.addEventListener("webkitAnimationEnd", onSubHeadersAppearAnimationEnd);
     callButton.addEventListener("animationend", onCallButtonAppearAnimationEnd);
     callButton.addEventListener("webkitAnimationEnd", onCallButtonAppearAnimationEnd);
-    // callButton.addEventListener("pointerup", playCallButtonOnTapAnimation);
-    callButtonLink.addEventListener("pointerup", playCallButtonOnTapAnimation);
+    callButton.addEventListener("pointerup", playCallButtonOnTapAnimation);
 
     if (window.getComputedStyle(truck.parentElement).display === "none") {
         playMainHeaderAppearAnimation();
@@ -79,12 +78,16 @@ function onCallButtonAppearAnimationEnd() {
 }
 
 function playCallButtonOnTapAnimation(e) {
-    e.preventDefault();
     console.log(e);
     callButton.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
     phoneSpan.innerHTML = '(067)123-45-67';
+    simulateCall(phoneNumber);
 }
 
 function getAnimationParams(animation, duration) {
     return `${duration}s ease-out 0s 1 ${animation}`;
+}
+
+function simulateCall(phoneNumber) {
+    window.open(`tel:${phoneNumber}`, '_self');
 }
