@@ -8,8 +8,8 @@ const slideshow = document.querySelector(".slideshow");
 const list = document.querySelector(".slides");
 const btns = document.querySelectorAll(".arrow");
 const nextBtn = document.querySelector(".arrow-next");
-const autoplayInterval = parseInt(slideshow.dataset.autoplayInterval) || 4000;
-const isActive = "is-active";
+const autoplayInterval = parseInt(slideshow.dataset.autoplayInterval) || 3000;
+const activeClassName = "is-active";
 const slidesCount = 14;
 let intervalID;
 
@@ -28,7 +28,7 @@ function initSlides() {
 
         slide.classList.add("slide");
         if (i === 0) {
-            slide.classList.add(isActive);
+            slide.classList.add(activeClassName);
         }
         cover.classList.add("cover");
         cover.style.backgroundImage = `url(${SLIDE_BASE_URL}${i + 1}.jpg)`;
@@ -37,19 +37,27 @@ function initSlides() {
     }
 }
 
+function switchNextSlide() {
+    const activeSlide = getActiveSlide();
+    activeSlide.nextElementSibling
+        ? activeSlide.nextElementSibling.classList.add(activeClassName)
+        : list.firstElementChild.classList.add(activeClassName);
+}
+
+function switchPrevSlide() {
+    const activeSlide = getActiveSlide();
+    activeSlide.previousElementSibling
+        ? activeSlide.previousElementSibling.classList.add(activeClassName)
+        : list.lastElementChild.classList.add(activeClassName);
+}
+
 function changeSlide() {
     for (const btn of btns) {
         btn.addEventListener("pointerup", (e) => {
-            const activeSlide = document.querySelector(".slide.is-active");
-            activeSlide.classList.remove(isActive);
             if (e.currentTarget === nextBtn) {
-                activeSlide.nextElementSibling
-                    ? activeSlide.nextElementSibling.classList.add(isActive)
-                    : list.firstElementChild.classList.add(isActive);
+                switchNextSlide();
             } else {
-                activeSlide.previousElementSibling
-                    ? activeSlide.previousElementSibling.classList.add(isActive)
-                    : list.lastElementChild.classList.add(isActive);
+                switchPrevSlide();
             }
         });
     }
@@ -58,7 +66,7 @@ function changeSlide() {
 function launchAutoPlay() {
     if (slideshow.dataset.autoplay === "true") {
         intervalID = setInterval(() => {
-            nextBtn.click();
+            switchNextSlide();
         }, autoplayInterval);
     }
 }
@@ -76,4 +84,10 @@ function stopAutoPlayOnHover() {
 
 function restoreAutoPlayOnHoverEnd() {
     slideshow.addEventListener("pointerout", launchAutoPlay);
+}
+
+function getActiveSlide() {
+    const activeSlide = document.querySelector(".slide.is-active");
+    activeSlide.classList.remove(activeClassName);
+    return activeSlide;
 }
