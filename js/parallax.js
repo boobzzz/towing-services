@@ -18,8 +18,8 @@ export function initParallax() {
     header3.addEventListener("webkitAnimationEnd", onSubHeadersAppearAnimationEnd);
     callButton.addEventListener("animationend", onCallButtonAppearAnimationEnd);
     callButton.addEventListener("webkitAnimationEnd", onCallButtonAppearAnimationEnd);
-    callButton.addEventListener("pointerup", playCallButtonOnTapAnimation);
-    // callButtonLink.addEventListener("pointerup", playCallButtonOnTapAnimation);
+    // callButton.addEventListener("pointerup", playCallButtonOnTapAnimation);
+    callButtonLink.addEventListener("pointerup", playCallButtonOnTapAnimation);
 
     if (window.getComputedStyle(truck.parentElement).display === "none") {
         playMainHeaderAppearAnimation();
@@ -79,7 +79,7 @@ function onCallButtonAppearAnimationEnd() {
 }
 
 function playCallButtonOnTapAnimation(e) {
-    // e.preventDefault();
+    e.preventDefault();
     console.log(e);
     callButton.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
     phoneSpan.innerHTML = '(067)123-45-67';
