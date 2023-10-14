@@ -43,6 +43,7 @@
 
 /*--------------------------------------------------------------------------------------Info-panel */
 .info-panel {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -51,6 +52,7 @@
     width: 100%;
     height: 100vh;
     transform: translateZ(0px);
+    z-index: 1;
 }
 
 .info-panel h1,
