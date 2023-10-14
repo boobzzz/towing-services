@@ -18,8 +18,8 @@ export function initParallax() {
     header3.addEventListener("webkitAnimationEnd", onSubHeadersAppearAnimationEnd);
     callButton.addEventListener("animationend", onCallButtonAppearAnimationEnd);
     callButton.addEventListener("webkitAnimationEnd", onCallButtonAppearAnimationEnd);
-    // callButton.addEventListener("pointerup", playCallButtonOnTapAnimation);
-    callButton.addEventListener("touchend", playCallButtonOnTapAnimation);
+    callButton.addEventListener("pointerup", playCallButtonOnTapAnimation);
+    // callButton.addEventListener("touchend", playCallButtonOnTapAnimation);
 
     if (window.getComputedStyle(truck.parentElement).display === "none") {
         playMainHeaderAppearAnimation();
