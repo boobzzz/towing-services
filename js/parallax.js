@@ -82,7 +82,7 @@ function playCallButtonOnTapAnimation(e) {
     console.log(e);
     callButton.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
     phoneSpan.innerHTML = "(067)000-00-00";
-    // simulateCall(phoneNumber);
+    simulateCall(phoneNumber);
 }
 
 function getAnimationParams(animation, duration) {
@@ -90,5 +90,6 @@ function getAnimationParams(animation, duration) {
 }
 
 function simulateCall(phoneNumber) {
-    window.open(`tel:${phoneNumber}`, "_self");
+    // window.open(`tel:${phoneNumber}`, "_self");
+    window.open(`tel:${phoneNumber}`, "_system");
 }
