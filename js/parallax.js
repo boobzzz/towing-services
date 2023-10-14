@@ -91,5 +91,5 @@ function getAnimationParams(animation, duration) {
 
 function simulateCall(phoneNumber) {
     // window.open(`tel:${phoneNumber}`, "_self");
-    window.open(`tel:${phoneNumber}`, "_system");
+    window.open(`tel:${phoneNumber}`, "_self");
 }
