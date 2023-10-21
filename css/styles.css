@@ -84,6 +84,11 @@ span {
 	.wrapper{
 		padding: 0 10px;
 	}
+	.root {
+		perspective: unset;
+		transform-style: unset;
+		-webkit-transform-style: unset;
+	}
 	.hook {
 		right: 10px;
 		width: 35px;
@@ -96,6 +101,11 @@ span {
 @media (min-width: 425px) and (max-width: 1200px) {
 	.wrapper{
 		padding: 0 20px;
+	}
+	.root {
+		perspective: unset;
+		transform-style: unset;
+		-webkit-transform-style: unset;
 	}
 }
 

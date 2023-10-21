@@ -18,7 +18,7 @@ export function initParallax() {
     header3.addEventListener("webkitAnimationEnd", onSubHeadersAppearAnimationEnd);
     callButton.addEventListener("animationend", onCallButtonAppearAnimationEnd);
     callButton.addEventListener("webkitAnimationEnd", onCallButtonAppearAnimationEnd);
-    callButton.addEventListener("click", playCallButtonOnTapAnimation);
+    callButton.addEventListener("pointerup", playCallButtonOnTapAnimation);
     // callButton.addEventListener("touchend", playCallButtonOnTapAnimation);
 
     if (window.getComputedStyle(truck.parentElement).display === "none") {
@@ -81,7 +81,7 @@ function onCallButtonAppearAnimationEnd() {
 function playCallButtonOnTapAnimation(e) {
     console.log(e);
     callButton.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
-    phoneSpan.innerHTML = "(067)000-00-00";
+    phoneSpan.innerHTML = e.target.className;
     simulateCall(phoneNumber);
 }
 
@@ -90,6 +90,5 @@ function getAnimationParams(animation, duration) {
 }
 
 function simulateCall(phoneNumber) {
-    // window.open(`tel:${phoneNumber}`, "_self");
     window.open(`tel:${phoneNumber}`, "_self");
 }
