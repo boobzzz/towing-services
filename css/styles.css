@@ -84,11 +84,12 @@ span {
 	.wrapper{
 		padding: 0 10px;
 	}
-	.root {
-		perspective: unset;
-		transform-style: unset;
-		-webkit-transform-style: unset;
-	}
+	/*.root {*/
+	/*	position: relative;*/
+	/*	perspective: unset;*/
+	/*	transform-style: unset;*/
+	/*	-webkit-transform-style: unset;*/
+	/*}*/
 	.hook {
 		right: 10px;
 		width: 35px;
@@ -102,11 +103,12 @@ span {
 	.wrapper{
 		padding: 0 20px;
 	}
-	.root {
-		perspective: unset;
-		transform-style: unset;
-		-webkit-transform-style: unset;
-	}
+	/*.root {*/
+	/*	position: relative;*/
+	/*	perspective: unset;*/
+	/*	transform-style: unset;*/
+	/*	-webkit-transform-style: unset;*/
+	/*}*/
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
