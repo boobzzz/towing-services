@@ -10,8 +10,9 @@
     width: 100vw;
     height: 100%;
     position: absolute;
+    top: 0;
     background-image: url("../assets/img/main-bg.png");
-    background-position: top center;
+    background-position: center top;
     background-size: cover;
     transform: translateZ(-100px) scale(2);
 }

@@ -19,7 +19,6 @@ export function initParallax() {
     callButton.addEventListener("animationend", onCallButtonAppearAnimationEnd);
     callButton.addEventListener("webkitAnimationEnd", onCallButtonAppearAnimationEnd);
     callButton.addEventListener("pointerup", playCallButtonOnTapAnimation);
-    // callButton.addEventListener("touchend", playCallButtonOnTapAnimation);
 
     if (window.getComputedStyle(truck.parentElement).display === "none") {
         playMainHeaderAppearAnimation();
@@ -82,7 +81,7 @@ function playCallButtonOnTapAnimation(e) {
     console.log(e);
     callButton.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
     phoneSpan.innerHTML = e.target.className;
-    simulateCall(phoneNumber);
+    // simulateCall(phoneNumber);
 }
 
 function getAnimationParams(animation, duration) {
