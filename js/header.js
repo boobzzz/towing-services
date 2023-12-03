@@ -1,5 +1,5 @@
-const burgerContainer = document.querySelector("header .wrapper");
 const burgerBtn = document.querySelector(".burger");
+const burgerContainer = burgerBtn.parentElement;
 const navMenu = document.querySelector('nav');
 const menu = document.querySelector(".menu-toggle");
 const gallery = document.querySelector(".gallery");

@@ -1,4 +1,6 @@
 .parallax-container {
+    --call-btn-side: 260px;
+    --vall-btn-margin-coef: 0.2;
     position: relative;
     height: 100vh;
     transform-style: preserve-3d;
@@ -51,6 +53,7 @@
     padding: 180px 100px 20px 0;
     width: 100%;
     height: 100vh;
+    font-size: 7rem;
     transform: translateZ(0px);
     z-index: 1;
 }
@@ -68,6 +71,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-bottom: calc(var(--call-btn-side) * 0.25);
 }
 
 .headers h1,
@@ -78,27 +82,26 @@
 }
 
 .headers h1 {
-    font-size: 7rem;
     color: var(--orange);
 }
 
 .headers h2 {
-    font-size: 5rem;
+    font-size: 0.7em;
 }
 
 .phone-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
 }
 
 .call-button {
     display: flex;
     align-items: center;
-    margin-bottom: 70px;
-    height: 260px;
-    width: 260px;
+    margin-bottom: calc(var(--call-btn-side) * 0.25);
+    height: var(--call-btn-side);
+    width: var(--call-btn-side);
+    font-size: calc(var(--call-btn-side) * 0.14);
     background-image: url("../assets/img/yellow-road-sign-rhomb.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -118,7 +121,6 @@
 .call-button span {
     font-family: "Rubik Distressed", cursive;
     font-weight: 400;
-    font-size: 2.5rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: -2px;
@@ -131,7 +133,6 @@
 }
 
 .phone-number span {
-    font-size: 7rem;
     color: var(--orange);
     -webkit-text-fill-color: var(--orange);
 }
@@ -200,12 +201,13 @@
 /*--------------------------------------------------------------------------------------Responsiveness */
 @media (min-width: 320px) and (max-width: 768px) {
     .parallax-container {
+        --call-btn-side: 120px;
         display: flex;
         flex-direction: column;
     }
     .truck {
         position: static;
-        height: 35vh;
+        height: 30vh;
         transform: none;
         margin-top: 25px;
     }
@@ -217,58 +219,45 @@
         padding-bottom: 10px;
         align-items: center;
         height: auto;
+        font-size: 3.25rem;
     }
     .headers {
         align-items: center;
     }
     .headers h1 {
-        font-size: 3.25rem;
         text-align: center;
     }
     .headers h2 {
         margin-top: 10px;
-        font-size: 2rem;
-    }
-    .phone-container {
-        margin: 32px 0;
-    }
-    .call-button {
-        margin-bottom: 30px;
-        height: 120px;
-        width: 120px;
     }
     .call-button span {
-        font-size: 1.25rem;
         letter-spacing: -1px;
     }
-    .phone-number span {
-        font-size: 2rem;
+    .phone-number {
+        font-size: 0.7em;
     }
 }
 
 @media (min-width: 320px) and (max-height: 576px) {
+    .parallax-container {
+        --call-btn-side: 100px;
+    }
     .truck {
         display: none;
     }
     .info-panel {
         padding-top: 100px;
     }
-    .call-button {
-        height: 100px;
-        width: 100px;
-    }
-    .call-button span {
-        font-size: 1rem;
-    }
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
     .parallax-container {
+        --call-btn-side: 150px;
         justify-content: flex-end;
     }
     .truck {
         position: absolute;
-        bottom: 50px;
+        bottom: 0;
         height: auto;
         transform: translateZ(-50px) scale(1.5);
     }
@@ -277,100 +266,60 @@
     }
     .info-panel {
         position: relative;
-        padding: 20px;
-        z-index: 10;
-    }
-    .headers h1 {
+        padding-bottom: 100px;
         font-size: 4rem;
+        z-index: 10;
     }
     .headers h2 {
         align-self: center;
-        font-size: 3rem;
     }
-    .phone-container {
-        margin: 48px 0;
-    }
-    .call-button {
-        height: 180px;
-        width: 180px;
-    }
-    .call-button span {
-        font-size: 1.8rem;
-    }
-    .phone-number span {
-        font-size: 3rem;
+    .phone-number {
+        font-size: 0.7em;
     }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
-    .truck {
-        bottom: -200px;
+    .parallax-container {
+        --call-btn-side: 180px;
     }
     .info-panel {
-        padding: 20px 40px;
-    }
-    .headers h1 {
         font-size: 6rem;
     }
-    .headers h2 {
-        font-size: 4rem;
-    }
-    .call-button {
-        margin-bottom: 40px;
-        height: 200px;
-        width: 200px;
-    }
-    .call-button span {
-        font-size: 2rem;
-    }
     .phone-number span {
-        font-size: 4rem;
+        font-size: 0.9em;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
+    .parallax-container {
+        --call-btn-side: 200px;
+    }
     .truck img {
         filter: brightness(0.7);
     }
     .info-panel {
-        padding: 220px 40px 40px 40px;
-    }
-    .headers h1 {
-        font-size: 6rem;
-    }
-    .headers h2 {
-        font-size: 4rem;
-    }
-    .phone-container {
-        align-self: center;
-        margin-right: 0;
-        margin-bottom: 0;
+        padding: 210px var(--side-padding) 40px var(--side-padding);
     }
     .phone-number {
         align-self: center;
     }
     .phone-number span {
-        font-size: 4rem;
+        font-size: 0.7em;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1400px) {
+    .parallax-container {
+        --call-btn-side: 240px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
     .truck img {
         filter: brightness(0.7);
     }
     .info-panel {
-        padding: 210px 40px 40px 40px;
-    }
-    .phone-container {
-        margin-bottom: 100px;
-    }
-    .call-button {
-        margin-bottom: 50px;
-        height: 200px;
-        width: 200px;
-    }
-    .call-button span {
-        font-size: 2rem;
+        padding: 230px var(--side-padding) 40px var(--side-padding);
     }
 }
 
@@ -379,7 +328,7 @@
         filter: brightness(0.7);
     }
     .info-panel {
-        padding: 160px 40px 40px 40px;
+        padding: 250px var(--side-padding) 40px var(--side-padding);
     }
 }
 
@@ -387,105 +336,61 @@
 /*--------------------------------------------------------------------------------------Responsiveness landscape */
 @media (min-width: 576px) and (max-width: 1024px) and (orientation: landscape) {
     .parallax-container {
+        --call-btn-side: 120px;
         flex-direction: unset;
         justify-content: unset;
     }
     .truck {
-        width: 70%;
+        display: block;
         height: 100vh;
-        left: 0;
+        left: 20%;
     }
     .truck > div {
         position: absolute;
-        bottom: -57px;
+        bottom: 0;
     }
     .info-panel {
         flex-direction: row;
         align-items: center;
-        padding: 60px 20px 0 20px;
+        padding: 180px var(--side-padding) 60px var(--side-padding);
+        font-size: 3rem;
     }
     .headers {
         align-items: flex-start;
     }
     .headers h1 {
-        font-size: 3rem;
         text-align: unset;
     }
     .headers h2 {
         align-self: unset;
-        font-size: 2rem;
     }
     .phone-container {
         align-self: flex-end;
-        margin: 32px 0;
-    }
-    .call-button {
-        margin-bottom: 30px;
-        height: 120px;
-        width: 120px;
     }
     .call-button span {
-        font-size: 1.25rem;
+        letter-spacing: -1px;
     }
     .phone-number {
         align-self: center;
     }
     .phone-number span {
-        font-size: 2rem;
         white-space: nowrap;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .truck {
-        width: 70%;
+    .parallax-container {
+        --call-btn-side: 140px;
     }
-}
-
-@media (width: 1024px) and (height: 768px) and (orientation: landscape) {
-    .truck {
-        width: 100%;
-    }
-    .truck > div {
-        bottom: -69px;
-    }
-    .headers h1 {
-        font-size: 5rem;
-    }
-    .headers h2 {
-        font-size: 3rem;
-    }
-    .call-button {
-        margin-bottom: 50px;
-        height: 200px;
-        width: 200px;
-    }
-    .call-button span {
-        font-size: 2rem;
-    }
-    .phone-number span {
-        font-size: 3rem;
+    .info-panel {
+        padding: 160px var(--side-padding) 60px var(--side-padding);
+        font-size: 4rem;
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1400px) and (orientation: landscape) {
     .info-panel {
-        padding: 160px 40px 40px 40px;
-    }
-    .headers h1 {
+        padding: 180px var(--side-padding) 60px var(--side-padding);
         font-size: 5rem;
-    }
-    .phone-container {
-        margin-bottom: 50px;
-    }
-    .phone-number span {
-        font-size: 4rem;
-    }
-}
-
-@media (min-width: 1025px) and (orientation: landscape) {
-    .call-button {
-        align-self: flex-end;
-        margin-right: 200px;
     }
 }

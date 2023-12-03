@@ -1,14 +1,17 @@
 main {
+    --gap: 24px;
+    --border-width: var(--border-24);
+    --border-radius: 100px;
     position: relative;
     isolation: isolate;
+    font-size: 8rem;
 }
 
 main h3 {
-    position: absolute;
-    top: 0;
+    position: relative;
+    isolation: isolate;
     font-family: 'Rubik Distressed', cursive;
     font-weight: 400;
-    font-size: 7rem;
     text-transform: capitalize;
     letter-spacing: -1px;
     color: var(--orange);
@@ -49,7 +52,9 @@ main h3::after {
 }
 
 .gallery h3 {
-    left: 100px;
+    position: absolute;
+    top: 0;
+    left: var(--side-padding);
 }
 
 .gallery h3::before {
@@ -71,7 +76,8 @@ main h3::after {
 .services {
     position: relative;
     isolation: isolate;
-    height: 75vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .services::before {
@@ -85,8 +91,8 @@ main h3::after {
 }
 
 .services h3 {
-    top: 2px;
-    right: 100px;
+    align-self: flex-end;
+    margin-right: var(--side-padding);
 }
 
 .services h3::after {
@@ -98,7 +104,7 @@ main h3::after {
     margin-bottom: 10px;
     font-family: 'Rubik Distressed', cursive;
     font-weight: 400;
-    font-size: 4rem;
+    font-size: 0.6em;
     text-transform: capitalize;
     color: var(--orange);
     z-index: 1;
@@ -106,41 +112,47 @@ main h3::after {
 
 .services span {
     position: relative;
-    font-size: 2rem;
+    font-size: 0.3em;
     z-index: 1;
+}
+
+.services-container {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .towing,
 .mounting {
-    position: absolute;
+    position: relative;
+    isolation: isolate;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 42.5%;
-    padding: 64px;
+    width: calc(50% - var(--gap));
+    padding: var(--side-padding);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .towing {
+    position: absolute;
     top: 0;
-    left: 100px;
-    padding: 88px 64px;
-    height: 90%;
-    border-bottom-right-radius: var(--radius-100);
+    left: 0;
+    padding-right: calc(var(--side-padding) + var(--gap));
+    padding-bottom: calc(var(--side-padding) + var(--gap));
+    border-bottom-right-radius: var(--border-radius);
     background-image: url("../assets/img/towing-service.jpg");
 }
 
 .mounting {
-    align-items: flex-end;
-    bottom: 0;
-    right: 100px;
-    height: 84%;
-    border-top-left-radius: var(--radius-100);
+    padding-top: calc(var(--side-padding) + var(--gap));
+    padding-left: calc(var(--side-padding) + var(--gap));
+    border-top-left-radius: var(--border-radius);
     background-image: url("../assets/img/crane-service.jpg");
 }
 
+.mounting h4,
 .mounting span {
     text-align: right;
 }
@@ -153,14 +165,14 @@ main h3::after {
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.65);
     z-index: 0;
 }
 
 .towing::before {
-    border-bottom: var(--border-24);
-    border-right: var(--border-24);
-    border-bottom-right-radius: var(--radius-100);
+    border-bottom: var(--border-width);
+    border-right: var(--border-width);
+    border-bottom-right-radius: var(--border-radius);
 }
 
 .towing::after {
@@ -173,9 +185,9 @@ main h3::after {
 }
 
 .mounting::before {
-    border-top: var(--border-24);
-    border-left: var(--border-24);
-    border-top-left-radius: var(--radius-100);
+    border-top: var(--border-width);
+    border-left: var(--border-width);
+    border-top-left-radius: var(--border-radius);
 }
 
 .mounting::after {
@@ -192,6 +204,8 @@ main h3::after {
 .testimonials {
     position: relative;
     isolation: isolate;
+    display: flex;
+    flex-direction: column;
     border-top: var(--border-1);
 }
 
@@ -202,14 +216,15 @@ main h3::after {
     width: 100%;
     height: 100%;
     background-image: url("../assets/img/diamond-plate.jpg");
-    background-repeat: repeat-x;
-    background-position: left;
+    background-repeat: repeat;
+    background-position: right top;
     background-size: contain;
     filter: brightness(0.4);
 }
 
 .testimonials h3 {
-    left: 100px;
+    align-self: flex-start;
+    margin-left: var(--side-padding);
 }
 
 .testimonials h3::before {
@@ -219,364 +234,134 @@ main h3::after {
 }
 
 .testimonials h3::after {
-    bottom: -50px; left: -49px;
+    bottom: -50px;
+    left: -49px;
     width: 50px;
     height: 50px;
     border-left: none;
     border-right: var(--border-1);
 }
 
-.testimonials .wrapper {
-    padding-top: 164px;
-    padding-bottom: 64px;
-}
-
 .testimonials_list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 32px;
+    gap: var(--gap);
+    padding: calc(var(--gap) * 2) var(--side-padding);
 }
 
 .testimonials_item {
-    display: flex;
+    padding: calc(var(--gap) * 2);
+    font-size: 0.3em;
+    border: var(--border-1);
     background-color: rgba(255,255,255,0.1);
-    border-top-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-}
-
-.testimonials_img {
-    position: relative;
-    isolation: isolate;
-    flex-shrink: 0;
-    width: 160px;
-    height: 160px;
-    border-left: var(--border-24);
-    border-top: var(--border-24);
-    border-top-left-radius: 60px;
-    overflow: hidden;
-}
-
-.testimonials_img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: bottom;
-}
-
-.testimonials_span {
-    flex-grow: 1;
-    -webkit-flex-grow: 1;
-    padding: 24px 12px;
-    text-align: justify;
-    border-top: var(--border-1);
-    border-bottom: var(--border-24);
-    border-right: var(--border-24);
-    border-bottom-right-radius: 60px;
     backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+}
+
+.testimonials_item:nth-child(1) {
+    border-left: var(--border-width);
+    border-top: var(--border-width);
+    border-top-left-radius: var(--border-radius);
+}
+.testimonials_item:nth-child(2) {
+    border-top: var(--border-width);
+    border-right: var(--border-width);
+    border-top-right-radius: var(--border-radius);
+}
+.testimonials_item:nth-child(3) {
+    border-left: var(--border-width);
+    border-bottom: var(--border-width);
+    border-bottom-left-radius: var(--border-radius);
+}
+.testimonials_item:nth-child(4) {
+    border-bottom: var(--border-width);
+    border-right: var(--border-width);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.testimonials_item b {
+    display: inline-block;
+    color: var(--orange);
+}
+
+.testimonials_item span,
+.testimonials_item b {
+    font-size: inherit;
 }
 
 
 /*--------------------------------------------------------------------------------------Responsiveness */
-@media (min-width: 320px) and (max-width: 1024px) {
-    main h3 {
-        font-size: 3rem;
-    }
-    .gallery h3,
-    .testimonials h3 {
-        left: 10px;
+@media (min-width: 320px) and (max-width: 1023px) {
+    main {
+        --gap: 12px;
+        --border-width: var(--border-12);
+        --border-radius: 30px;
+        font-size: 4rem;
     }
     .services {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        height: 90vh;
     }
-    .services h3 {
-        position: relative;
-        top: 0;
-        right: 10px;
-    }
-    .services span {
-        font-size: 1rem;
+    .services-container {
+        flex-direction: column;
+        justify-content: unset;
     }
     .towing,
     .mounting {
-        position: relative;
-        padding: 24px 12px;
-        height: 50%;
-        width: calc(100% - 10px);
+        width: calc(100% - var(--side-padding));
     }
     .towing {
-        left: 0;
+        position: relative;
+        border-bottom-right-radius: var(--border-radius);
+    }
+    .mounting {
+        align-self: flex-end;
+        margin-top: calc(var(--gap));
+        border-top-left-radius: var(--border-radius);
+    }
+    .towing::before {
+        border-bottom: var(--border-12);
+        border-right: var(--border-12);
+        border-bottom-right-radius: var(--border-radius);
+    }
+    .mounting::before {
+        border-top: var(--border-12);
+        border-left: var(--border-12);
+        border-top-left-radius: var(--border-radius);
+    }
+    .testimonials_list {
+        display: flex;
+        flex-direction: column;
+        padding: calc(var(--gap) * 2) 0;
+    }
+    .testimonials_item {
+        width: calc(100% - var(--side-padding));
+    }
+    .testimonials_item:nth-child(even) {
         align-self: flex-start;
-        margin-bottom: 10px;
-        padding-right: 24px;
+        border-left: none;
     }
-    .mounting {
-        top: unset;
-        right: 0;
-        bottom: 0;
-        padding-left: 24px;
-        padding-bottom: 12px;
-    }
-    .towing::before {
-        border-bottom: var(--border-12);
-        border-right: var(--border-12);
-        border-bottom-right-radius: var(--radius-50);
-    }
-    .mounting::before {
-        border-top: var(--border-12);
-        border-left: var(--border-12);
-        border-top-left-radius: var(--radius-50);
-    }
-    .towing h4,
-    .mounting h4 {
-        font-size: 2rem;
-    }
-    .testimonials::before {
-        background-repeat: repeat-y;
-        background-position: top;
-    }
-    .testimonials span {
-        font-size: 1rem;
-    }
-    .testimonials .wrapper {
-        padding: 64px 10px 32px 10px;
-    }
-    .testimonials_list {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        gap: 16px;
-    }
-    .testimonials_img {
-        width: 100px;
-        height: 100%;
-        border-left: var(--border-12);
-        border-top: var(--border-12);
-        border-top-left-radius: 30px;
-    }
-    .testimonials_span {
-        padding: 8px;
-        border-right: var(--border-12);
-        border-bottom: var(--border-12);
-        border-bottom-right-radius: 30px;
+    .testimonials_item:nth-child(odd) {
+        align-self: flex-end;
+        border-right: none;
     }
 }
 
-@media (min-width: 360px) and (max-width: 1024px) {
-    .testimonials_img {
-        height: 100px;
+@media (min-width: 576px) and (max-width: 1023px) {
+    main {
+        font-size: 5rem;
     }
 }
 
-@media (min-width: 425px) and (max-width: 1024px) {
-    main h3 {
-        font-size: 4rem;
-    }
-    .towing h4,
-    .mounting h4 {
-        font-size: 3rem;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 1024px) {
-    .gallery h3,
-    .testimonials h3 {
-        left: 20px;
-    }
-    .services h3 {
-        right: 20px;
-    }
-    .services span {
-        font-size: 1.5rem;
-    }
-    .towing,
-    .mounting {
-        padding: 48px 24px;
-        width: calc(100% - 20px);
-    }
-    .towing {
-        margin-bottom: 20px;
-        padding-right: 48px;
-    }
-    .mounting {
-        padding-left: 48px;
-        padding-bottom: 24px;
-    }
-    .towing::before {
-        border-bottom: var(--border-24);
-        border-right: var(--border-24);
-        border-bottom-right-radius: var(--radius-100);
-    }
-    .mounting::before {
-        border-top: var(--border-24);
-        border-left: var(--border-24);
-        border-top-left-radius: var(--radius-100);
-    }
-    .testimonials .wrapper {
-        padding: 64px 20px 32px 20px;
-    }
-    .testimonials_list {
-        gap: 24px;
-    }
-    .testimonials_img {
-        width: 120px;
-        height: 120px;
-    }
-    .testimonials_span {
-        padding: 12px;
-    }
-    .testimonials_span span {
-        font-size: 1.25rem;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1500px) {
-    .gallery h3,
-    .testimonials h3 {
-        left: 40px;
-    }
-    .services h3 {
-        right: 40px;
-    }
-    .towing,
-    .mounting {
-        width: calc(100% - 40px);
-    }
-    .testimonials .wrapper {
-        padding: 64px 40px 32px 40px;
-    }
-    .testimonials_img {
-        width: 120px;
-        height: 120px;
-        border-top-left-radius: 60px;
-    }
-    .testimonials_span {
-        padding: 24px;
-        border-bottom-right-radius: 60px;
+@media (min-width: 768px) and (max-width: 1023px) {
+    main {
+        --border-radius: 60px;
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1400px) {
-    main h3 {
-        font-size: 4.5rem;
-    }
-    .towing,
-    .mounting {
-        padding: 48px 24px;
-        width: 47.5%;
-    }
-    .towing {
-        left: 0;
-    }
-    .mounting {
-        top: unset;
-        right: 0;
-        bottom: 0;
-        padding-bottom: 24px;
-    }
-    .testimonials::before {
-        background-repeat: repeat;
-        background-position: top;
-    }
-    .testimonials_list {
-        gap: 12px;
-    }
-    .testimonials_img {
-        width: 150px;
-        height: 150px;
-    }
-    .testimonials_span {
-        padding: 12px;
-    }
-    .testimonials_span span {
-        font-size: 1.25rem;
-    }
-}
-
-@media (min-width: 1200px) and (max-width: 1500px) {
-    .testimonials_list {
-        gap: 24px;
-    }
-    .testimonials_span {
-        padding: 12px;
-    }
-}
-
-@media (min-width: 1400px) and (max-width: 1500px) {
-    .towing,
-    .mounting {
-        padding: 48px 24px;
-        width: 45%;
-    }
-    .towing {
-        left: 40px;
-        padding-right: 48px;
-    }
-    .mounting {
-        right: 40px;
-        padding-left: 48px;
-        padding-bottom: 24px;
-    }
-    .testimonials .wrapper {
-        padding: 108px 40px 32px 40px;
-    }
-    .testimonials_img {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-
-/*--------------------------------------------------------------------------------------Responsiveness landscape */
-@media (min-width: 576px) and (max-width: 1024px) and (orientation: landscape) {
-    main h3 {
-        font-size: 3rem;
-    }
-    .gallery h3 {
-        left: 20px;
-    }
-    .services h3 {
-        right: 20px;
-    }
-    .services {
-        height: 95vh;
-    }
-    .services h4 {
-        font-size: 2rem;
-    }
-    .services span {
-        font-size: 1rem;
-    }
-    .towing,
-    .mounting {
-        position: absolute;
-        padding: 30px 20px;
-        width: calc(50% - 10px);
-        height: 85%;
-    }
-    .mounting {
-        padding: 20px;
-    }
-    .towing::before {
-        border-bottom: var(--border-12);
-        border-right: var(--border-12);
-        border-bottom-right-radius: var(--radius-50);
-    }
-    .mounting::before {
-        border-top: var(--border-12);
-        border-left: var(--border-12);
-        border-top-left-radius: var(--radius-50);
-    }
-
-    @media (min-width: 780px) and (max-width: 1024px) and (orientation: landscape) {
-        .services span {
-            font-size: 1.5rem;
-        }
-    }
-    @media (min-width: 1024px) and (max-width: 1400px) and (orientation: landscape) {
-
+    main {
+        font-size: 6rem;
     }
 }

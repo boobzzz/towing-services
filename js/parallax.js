@@ -4,10 +4,10 @@ const header2 = document.querySelector(".hq");
 const header3 = document.querySelector(".h24");
 const callButton = document.querySelector(".call-button");
 const phone = document.querySelector(".phone-number");
-const phoneSpan = document.querySelector(".phone-number span");
 const animationDuration = 0.8;
 const halfAnimationDuration = animationDuration / 2;
-const phoneNumber = "+380676768998";
+// const phoneSpan = document.querySelector(".phone-number span");
+// const phoneNumber = "+380676768998";
 
 export function initParallax() {
     truck.addEventListener("animationend", onTruckAnimationEnd);
@@ -78,9 +78,8 @@ function onCallButtonAppearAnimationEnd() {
 }
 
 function playCallButtonOnTapAnimation(e) {
-    console.log(e);
     callButton.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
-    phoneSpan.innerHTML = e.target.className;
+    // phoneSpan.innerHTML = e.target.className;
     // simulateCall(phoneNumber);
 }
 
