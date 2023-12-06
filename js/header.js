@@ -19,7 +19,9 @@ function initMenuButtons() {
     sections.forEach((section) => {
         const button = document.querySelector("." + section.className + "-btn");
         button.addEventListener("pointerup", () => {
-            section.scrollIntoView({ behavior: "auto" });
+            setTimeout(() => {
+                section.scrollIntoView({ behavior: "smooth" });
+            }, 100);
         });
     });
 }
