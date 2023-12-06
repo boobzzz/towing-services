@@ -21,7 +21,7 @@ function initMenuButtons() {
         button.addEventListener("pointerup", () => {
             setTimeout(() => {
                 section.scrollIntoView({ behavior: "smooth" });
-            }, 100);
+            }, 250);
         });
     });
 }
