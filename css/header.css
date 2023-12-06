@@ -21,6 +21,11 @@ header {
     object-fit: cover;
 }
 
+nav {
+    position: relative;
+    z-index: 100;
+}
+
 .menu-list {
     display: flex;
 }
