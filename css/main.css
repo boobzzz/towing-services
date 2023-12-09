@@ -128,7 +128,7 @@ main h3::after {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: calc(50% - var(--gap));
+    width: calc(50% - var(--gap) / 2);
     padding: var(--side-padding);
     background-position: center;
     background-repeat: no-repeat;
