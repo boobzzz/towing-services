@@ -380,11 +380,11 @@
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .parallax-container {
-        --call-btn-side: 140px;
+        --call-btn-side: 120px;
     }
     .info-panel {
         padding: 160px var(--side-padding) 60px var(--side-padding);
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 }
 
