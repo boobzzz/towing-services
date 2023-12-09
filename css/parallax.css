@@ -390,6 +390,9 @@
         padding: 180px var(--side-padding) 60px var(--side-padding);
         font-size: 5rem;
     }
+    .call-button span {
+        letter-spacing: -1px;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1400px) and (orientation: landscape) and (max-aspect-ratio: 2/1) {
