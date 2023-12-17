@@ -220,6 +220,7 @@ main h3::after {
     background-position: right top;
     background-size: contain;
     filter: brightness(0.4);
+    z-index: -1;
 }
 
 .testimonials h3 {
