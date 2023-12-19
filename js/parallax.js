@@ -6,8 +6,6 @@ const callButton = document.querySelector(".call-button");
 const phone = document.querySelector(".phone-number");
 const animationDuration = 0.8;
 const halfAnimationDuration = animationDuration / 2;
-// const phoneSpan = document.querySelector(".phone-number span");
-// const phoneNumber = "+380676768998";
 
 export function initParallax() {
     truck.addEventListener("animationend", onTruckAnimationEnd);
@@ -79,8 +77,6 @@ function onCallButtonAppearAnimationEnd() {
 
 function playCallButtonOnTapAnimation(e) {
     callButton.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
-    // phoneSpan.innerHTML = e.target.className;
-    // simulateCall(phoneNumber);
 }
 
 function getAnimationParams(animation, duration) {
