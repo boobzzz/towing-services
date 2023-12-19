@@ -18,12 +18,16 @@ export function initHeader() {
 function initMenuButtons() {
     sections.forEach((section) => {
         const button = document.querySelector("." + section.className + "-btn");
-        button.addEventListener("pointerup", () => {
-            section.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        });
+        const sectionHeader = document.querySelector("." + section.className + " h3");
+        button.addEventListener("pointerup", () => menuItemClickHandler(section));
+        sectionHeader.addEventListener("pointerup", () => menuItemClickHandler(section));
+    });
+}
+
+function menuItemClickHandler(section) {
+    section.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
     });
 }
 
