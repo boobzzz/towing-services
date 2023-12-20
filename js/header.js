@@ -18,10 +18,10 @@ export function initHeader() {
 }
 
 function initMenuButtons() {
-    sections.forEach((section) => {
+    sections.forEach((section, i) => {
         const button = document.querySelector("." + section.className + "-btn");
         const sectionHeader = document.querySelector("." + section.className + " h3");
-        button.addEventListener("pointerup", () => menuItemClickHandler(section, 1));
+        button.addEventListener("pointerup", () => menuItemClickHandler(section, 0.5 * (i + 1)));
         sectionHeader.addEventListener("pointerup", () => menuItemClickHandler(section, 0.5));
     });
 }
