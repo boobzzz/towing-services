@@ -1,4 +1,0 @@
-https://github.com/ihorborys/towing-services.git
-1. Форма кнопок Меню: https://www.cyberpunk.net/ua/en/ ;
-2. ТЕКСТ MAIN: ПОСЛУГИ З ЕВАКУАЦІЇ (оранжевим) НАЙВИЩОЇ ЯКОСТІ (білим) 24/7 (оранжевим) ;
-3. Шрифти встановити в Fonts ;
