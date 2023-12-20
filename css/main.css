@@ -15,6 +15,7 @@ main h3 {
     text-transform: capitalize;
     letter-spacing: -1px;
     color: var(--orange);
+    cursor: pointer;
     z-index: 10;
 }
 

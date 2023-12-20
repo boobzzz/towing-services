@@ -36,7 +36,6 @@ window.addEventListener("load", () => {
     initParallax();
     initSlideshow();
     initTestimonials();
-
 });
 screen.orientation.addEventListener("change", onOrientationChange);
 root.addEventListener("scroll", setHookTranslateYOnScroll);

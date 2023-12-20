@@ -34,7 +34,7 @@ span {
 
 .root {
 	height: 100vh;
-	overflow-y: auto;
+	overflow-y: scroll;
 	overflow-x: hidden;
 	perspective: 100px;
 	transform-style: preserve-3d;

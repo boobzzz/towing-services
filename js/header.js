@@ -1,3 +1,4 @@
+const root = document.querySelector(".root");
 const burgerBtn = document.querySelector(".burger");
 const burgerContainer = burgerBtn.parentElement;
 const navMenu = document.querySelector('nav');
@@ -10,24 +11,25 @@ const classOpen = "nav-open";
 let isMenuVisible = false;
 
 export function initHeader() {
-    initMenuButtons();
+    gsap.registerPlugin(ScrollToPlugin);
     menu.addEventListener("pointerup", toggleBurgerContainer);
     burgerBtn.addEventListener("pointerup", toggleBurgerMenu);
+    initMenuButtons();
 }
 
 function initMenuButtons() {
     sections.forEach((section) => {
         const button = document.querySelector("." + section.className + "-btn");
         const sectionHeader = document.querySelector("." + section.className + " h3");
-        button.addEventListener("pointerup", () => menuItemClickHandler(section));
-        sectionHeader.addEventListener("pointerup", () => menuItemClickHandler(section));
+        button.addEventListener("pointerup", () => menuItemClickHandler(section, 1));
+        sectionHeader.addEventListener("pointerup", () => menuItemClickHandler(section, 0.5));
     });
 }
 
-function menuItemClickHandler(section) {
-    section.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+function menuItemClickHandler(section, duration) {
+    gsap.to(root, {
+        duration,
+        scrollTo: { y: section }
     });
 }
 
