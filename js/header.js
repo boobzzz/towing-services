@@ -21,15 +21,16 @@ function initMenuButtons() {
     sections.forEach((section, i) => {
         const button = document.querySelector("." + section.className + "-btn");
         const sectionHeader = document.querySelector("." + section.className + " h3");
-        button.addEventListener("pointerup", () => menuItemClickHandler(section, 0.5 * (i + 1)));
+        button.addEventListener("pointerup", () => menuItemClickHandler(section, 0.5 * (i + 1), "bounce.out"));
         sectionHeader.addEventListener("pointerup", () => menuItemClickHandler(section, 0.5));
     });
 }
 
-function menuItemClickHandler(section, duration) {
+function menuItemClickHandler(section, duration, ease = "power3.out") {
     gsap.to(root, {
         duration,
-        scrollTo: { y: section }
+        scrollTo: { y: section },
+        ease
     });
 }
 
