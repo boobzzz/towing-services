@@ -195,7 +195,7 @@ header {
         margin-left: 0;
         margin-top: 5px;
         padding: unset;
-        height: 90px;
+        height: 70px;
         border-top: var(--border-1);
         border-bottom: var(--border-1);
         border-left: var(--border-12);
@@ -319,7 +319,7 @@ header {
 /*--------------------------------------------------------------------------------------Responsiveness landscape */
 @media (min-width: 576px) and (max-width: 1024px) and (orientation: landscape) {
     header {
-        padding-top: 10px;
+        padding-top: var(--side-padding);
     }
     .logo {
         width: 90px;
@@ -339,15 +339,8 @@ header {
     .menu-toggle-bar--bottom {
         transform: translate(0, 8px);
     }
-}
-
-@media (min-width: 576px) and (max-width: 1024px) and (orientation: landscape) {
-    header {
-        padding-top: var(--side-padding);
-    }
-    .logo {
-        width: 100px;
-        height: 100px;
+    .menu-item {
+        height: 60px;
     }
 }
 
