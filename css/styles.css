@@ -8,6 +8,18 @@
 
 /* Fonts */
 @font-face {
+	font-family: "Montserrat Regular";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../assets/fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+	font-family: "Montserrat Medium";
+	font-style: normal;
+	font-weight: 500;
+	src: url("../assets/fonts/Montserrat-Medium.ttf");
+}
+@font-face {
 	font-family: "Rubik Distressed";
 	font-style: normal;
 	font-weight: 400;
@@ -22,7 +34,7 @@ body {
 	--border-1: 1px solid var(--orange);
 	--border-12: 12px solid var(--orange);
 	--border-24: 24px solid var(--orange);
-	font-family: "Montserrat", sans-serif;
+	font-family: "Montserrat Medium", sans-serif;
 }
 
 span {
