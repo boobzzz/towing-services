@@ -185,7 +185,7 @@ header {
     .menu-list {
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
+        height: 100dvh;
         padding: 0 10px;
         background-color: rgba(0,0,0,0.8);
     }

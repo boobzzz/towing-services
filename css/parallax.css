@@ -24,7 +24,7 @@
 .truck {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     transform: translateZ(-50px) scale(1.5);
 }
 
@@ -52,7 +52,7 @@
     align-items: flex-end;
     padding: 180px 100px 20px 0;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     font-size: 7rem;
     transform: translateZ(0px);
     z-index: 1;
@@ -342,7 +342,7 @@
     }
     .truck {
         display: block;
-        height: 100vh;
+        height: 100dvh;
         left: 20%;
     }
     .truck > div {
