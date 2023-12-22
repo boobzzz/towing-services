@@ -2,7 +2,7 @@
     --call-btn-side: 260px;
     --vall-btn-margin-coef: 0.2;
     position: relative;
-    height: 100vh;
+    height: 100dvh;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
 }
