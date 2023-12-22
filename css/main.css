@@ -11,7 +11,6 @@ main h3 {
     position: relative;
     isolation: isolate;
     font-family: 'Rubik Distressed', cursive;
-    font-weight: 400;
     text-transform: capitalize;
     letter-spacing: -1px;
     color: var(--orange);
@@ -104,7 +103,6 @@ main h3::after {
     position: relative;
     margin-bottom: 10px;
     font-family: 'Rubik Distressed', cursive;
-    font-weight: 400;
     font-size: 0.6em;
     text-transform: capitalize;
     color: var(--orange);

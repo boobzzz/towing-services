@@ -62,7 +62,6 @@
 .info-panel h2,
 .info-panel span {
     font-family: "Rubik Distressed", cursive;
-    font-weight: 400;
     text-transform: capitalize;
     color: var(--white);
 }
@@ -120,7 +119,6 @@
 
 .call-button span {
     font-family: "Rubik Distressed", cursive;
-    font-weight: 400;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: -2px;
