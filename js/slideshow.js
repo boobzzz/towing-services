@@ -8,7 +8,7 @@ const slideshow = document.querySelector(".slideshow");
 const list = document.querySelector(".slides");
 const btns = document.querySelectorAll(".arrow");
 const nextBtn = document.querySelector(".arrow-next");
-const autoplayInterval = parseInt(slideshow.dataset.autoplayInterval) || 3000;
+const autoplayInterval = parseInt(slideshow.dataset.autoplayInterval) || 5000;
 const activeClassName = "is-active";
 const slidesCount = 14;
 let intervalID;

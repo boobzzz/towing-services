@@ -7,8 +7,6 @@
 
 
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
-
 @font-face {
 	font-family: "Rubik Distressed";
 	font-style: normal;
@@ -33,7 +31,7 @@ span {
 }
 
 .root {
-	height: 100vh;
+	height: 100dvh;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	perspective: 100px;
