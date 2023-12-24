@@ -243,6 +243,12 @@ header {
     .menu-toggle-bar--bottom {
         transform: translate(0, 12px);
     }
+    .menu-list {
+        align-items: center;
+    }
+    .menu-item {
+        width: 70vw;
+    }
     .menu-item:last-child::after {
         background-position: center;
     }
@@ -253,7 +259,10 @@ header {
         padding-top: var(--side-padding);
     }
     .menu-list {
-        padding: 0 20%;
+        align-items: center;
+    }
+    .menu-item {
+        width: 60vw;
     }
 }
 

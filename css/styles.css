@@ -40,20 +40,18 @@ body {
 	--border-1: 1px solid var(--orange);
 	--border-12: 12px solid var(--orange);
 	--border-24: 24px solid var(--orange);
-	font-family: "Montserrat Medium", sans-serif;
 }
 
-span {
+span, b {
+	font-family: "Montserrat Medium", sans-serif;
 	color: var(--white);
 }
 
 .root {
+	position: relative;
 	height: 100dvh;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	perspective: 100px;
-	transform-style: preserve-3d;
-	-webkit-transform-style: preserve-3d;
 }
 
 
