@@ -369,7 +369,6 @@
         --call-btn-side: 120px;
     }
     .info-panel {
-        padding: 160px var(--side-padding) 60px var(--side-padding);
         font-size: 3rem;
     }
 }
@@ -384,15 +383,5 @@
     }
     .call-button span {
         letter-spacing: -1px;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1400px) and (orientation: landscape) and (max-aspect-ratio: 2/1) {
-    .parallax-container {
-        --call-btn-side: 140px;
-    }
-    .info-panel {
-        padding: 140px var(--side-padding) 60px var(--side-padding);
-        font-size: 4rem;
     }
 }

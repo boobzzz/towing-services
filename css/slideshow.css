@@ -129,7 +129,7 @@ button {
         content: none;
     }
     .cover {
-        height: 50vh;
+        height: 75vh;
     }
     .arrow i {
         font-size: 40px;
@@ -162,12 +162,6 @@ button {
         right: 20px;
     }
 }
-
-/*@media (min-width: 1024px) and (max-width: 1400px) {*/
-/*    .cover {*/
-/*        height: 720px;*/
-/*    }*/
-/*}*/
 
 
 /*--------------------------------------------------------------------------------------Responsiveness landscape */

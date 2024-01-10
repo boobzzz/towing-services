@@ -224,6 +224,15 @@ header {
     }
 }
 
+@media (min-width: 360px) and (max-width: 1023px) {
+    .menu-list {
+        align-items: center;
+    }
+    .menu-item {
+        width: 80vw;
+    }
+}
+
 @media (min-width: 425px) and (max-width: 768px) {
     .logo {
         width: 140px;
@@ -243,9 +252,6 @@ header {
     .menu-toggle-bar--bottom {
         transform: translate(0, 12px);
     }
-    .menu-list {
-        align-items: center;
-    }
     .menu-item {
         width: 70vw;
     }
@@ -257,12 +263,6 @@ header {
 @media (min-width: 576px) and (max-width: 1023px) {
     header {
         padding-top: var(--side-padding);
-    }
-    .menu-list {
-        align-items: center;
-    }
-    .menu-item {
-        width: 60vw;
     }
 }
 
@@ -326,7 +326,7 @@ header {
 
 
 /*--------------------------------------------------------------------------------------Responsiveness landscape */
-@media (min-width: 576px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 576px) and (max-width: 1023px) and (orientation: landscape) {
     header {
         padding-top: var(--side-padding);
     }
@@ -349,11 +349,11 @@ header {
         transform: translate(0, 8px);
     }
     .menu-item {
-        height: 60px;
+        width: 50vw;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
     header {
         padding-top: calc(var(--side-padding) / 2);
     }
