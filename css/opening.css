@@ -235,9 +235,9 @@
     }
 }
 
-@media (min-width: 360px) and (max-width: 768px) {
+@media (min-width: 375px) and (max-width: 768px) {
     .opening {
-        --call-btn-side: 110px;
+        --call-btn-side: 120px;
         justify-content: flex-end;
     }
     .truck {
@@ -322,7 +322,7 @@
 
 
 /*--------------------------------------------------------------------------------------Responsiveness landscape */
-@media (min-width: 576px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 568px) and (max-width: 1024px) and (orientation: landscape) {
     .opening {
         --call-btn-side: 100px;
         flex-direction: unset;
@@ -336,6 +336,9 @@
         position: absolute;
         left: 15%;
         bottom: 0;
+    }
+    .truck img {
+        filter: brightness(0.7);
     }
     .info-panel {
         flex-direction: row;
