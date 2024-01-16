@@ -1,5 +1,5 @@
 import { initHeader } from "./header.js";
-import { initParallax } from "./parallax.js";
+import { initParallax } from "./opening.js";
 import { initSlideshow } from "./slideshow.js";
 
 const root = document.querySelector(".root");

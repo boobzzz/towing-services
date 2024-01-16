@@ -75,14 +75,10 @@ function onCallButtonAppearAnimationEnd() {
     callButton.style.animation = "";
 }
 
-function playCallButtonOnTapAnimation(e) {
+function playCallButtonOnTapAnimation() {
     callButton.style.animation = getAnimationParams("callButtonOnTapAnimation", animationDuration / 4);
 }
 
 function getAnimationParams(animation, duration) {
     return `${duration}s ease-out 0s 1 ${animation}`;
-}
-
-function simulateCall(phoneNumber) {
-    window.open(`tel:${phoneNumber}`, "_self");
 }

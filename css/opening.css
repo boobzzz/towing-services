@@ -1,4 +1,4 @@
-.parallax-container {
+.opening {
     --call-btn-side: 260px;
     --vall-btn-margin-coef: 0.2;
     position: relative;
@@ -7,7 +7,7 @@
     height: 100dvh;
 }
 
-.parallax-container::after {
+.opening::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -25,7 +25,7 @@
 .truck {
     position: absolute;
     width: 100%;
-    height: 100dvh;
+    height: 100%;
     z-index: 1;
 }
 
@@ -53,7 +53,7 @@
     align-items: flex-end;
     padding: 180px 100px 20px 0;
     width: 100%;
-    height: 100dvh;
+    height: 100%;
     font-size: 7rem;
     z-index: 2;
 }
@@ -70,7 +70,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    /*margin-bottom: calc(var(--call-btn-side) * 0.25);*/
 }
 
 .headers h1,
@@ -198,13 +197,14 @@
 
 /*--------------------------------------------------------------------------------------Responsiveness */
 @media (min-width: 320px) and (max-width: 768px) {
-    .parallax-container {
+    .opening {
         --call-btn-side: 100px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
     .truck {
+        display: none;
         position: static;
         height: 30vh;
         transform: none;
@@ -213,8 +213,7 @@
         position: static;
     }
     .info-panel {
-        padding: 0;
-        padding-bottom: 20px;
+        padding: calc(var(--side-padding) + 90px) 0 20px 0;
         align-items: center;
         height: 100%;
         font-size: 3.25rem;
@@ -237,9 +236,12 @@
 }
 
 @media (min-width: 360px) and (max-width: 768px) {
-    .parallax-container {
+    .opening {
         --call-btn-side: 120px;
         justify-content: flex-end;
+    }
+    .truck {
+        display: block;
     }
     .info-panel {
         height: 65%;
@@ -247,7 +249,7 @@
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
-    .parallax-container {
+    .opening {
         --call-btn-side: 160px;
     }
     .info-panel {
@@ -264,7 +266,7 @@
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
-    .parallax-container {
+    .opening {
         --call-btn-side: 180px;
     }
     .info-panel {
@@ -276,7 +278,7 @@
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
-    .parallax-container {
+    .opening {
         --call-btn-side: 200px;
     }
     .truck img {
@@ -294,7 +296,7 @@
 }
 
 @media (min-width: 992px) and (max-width: 1400px) {
-    .parallax-container {
+    .opening {
         --call-btn-side: 240px;
     }
 }
@@ -320,7 +322,7 @@
 
 /*--------------------------------------------------------------------------------------Responsiveness landscape */
 @media (min-width: 576px) and (max-width: 1024px) and (orientation: landscape) {
-    .parallax-container {
+    .opening {
         --call-btn-side: 100px;
         flex-direction: unset;
         justify-content: unset;
@@ -365,7 +367,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .parallax-container {
+    .opening {
         --call-btn-side: 120px;
     }
     .info-panel {
@@ -374,7 +376,7 @@
 }
 
 @media (min-width: 1025px) and (max-width: 1400px) and (orientation: landscape) {
-    .parallax-container {
+    .opening {
         --call-btn-side: 180px;
     }
     .info-panel {
