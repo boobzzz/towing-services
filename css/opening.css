@@ -237,14 +237,15 @@
 
 @media (min-width: 360px) and (max-width: 768px) {
     .opening {
-        --call-btn-side: 120px;
+        --call-btn-side: 110px;
         justify-content: flex-end;
     }
     .truck {
         display: block;
     }
     .info-panel {
-        height: 65%;
+        padding: 0 0 20px 0;
+        height: 70%;
     }
 }
 
