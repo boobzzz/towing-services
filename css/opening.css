@@ -206,7 +206,7 @@
     .truck {
         display: none;
         position: static;
-        height: 30vh;
+        height: 30%;
         transform: none;
     }
     .truck > div {
@@ -329,7 +329,7 @@
     }
     .truck {
         position: absolute;
-        height: 100dvh;
+        height: 100%;
     }
     .truck > div {
         position: absolute;
