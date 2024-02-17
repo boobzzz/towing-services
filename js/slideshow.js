@@ -1,6 +1,6 @@
-const ghPagesRootURL = "https://boobzzz.github.io/towing-services/";
 const gallerySlideUrl = "assets/img/gallery/slide-";
-const SLIDE_BASE_URL = window.location.origin === ghPagesRootURL
+const ghPagesRootURL = "https://boobzzz.github.io/towing-services/";
+const slideBaseURL = window.location.origin === ghPagesRootURL
     ? ghPagesRootURL + gallerySlideUrl
     : gallerySlideUrl;
 
@@ -31,7 +31,7 @@ function initSlides() {
             slide.classList.add(activeClassName);
         }
         cover.classList.add("cover");
-        cover.style.backgroundImage = `url(${SLIDE_BASE_URL}${i + 1}.jpg)`;
+        cover.style.backgroundImage = `url(${slideBaseURL}${i + 1}.jpg)`;
         slide.append(cover);
         list.append(slide);
     }

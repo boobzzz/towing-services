@@ -1,9 +1,6 @@
 .opening {
     --call-btn-side: 260px;
-    --vall-btn-margin-coef: 0.2;
     position: relative;
-    isolation: isolate;
-    width: 100vw;
     height: 100dvh;
 }
 
@@ -215,7 +212,6 @@
     .info-panel {
         padding: calc(var(--side-padding) + 90px) 0 20px 0;
         align-items: center;
-        height: 100%;
         font-size: 3.25rem;
     }
     .headers {
@@ -321,7 +317,7 @@
 
 
 /*--------------------------------------------------------------------------------------Responsiveness landscape */
-@media (min-width: 568px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 480px) and (max-width: 1024px) and (orientation: landscape) {
     .opening {
         --call-btn-side: 100px;
         flex-direction: unset;
