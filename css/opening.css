@@ -1,7 +1,7 @@
 .opening {
     --call-btn-side: 260px;
     position: relative;
-    height: 100vh;
+    height: 100dvh;
 }
 
 .opening::after {
