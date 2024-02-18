@@ -21,6 +21,9 @@ export function initParallax() {
     if (window.getComputedStyle(truck.parentElement).display === "none") {
         playMainHeaderAppearAnimation();
         playPhoneAppearAnimation();
+        const info = document.querySelector(".info-panel");
+        const phoneNumber = document.querySelector(".phone-number span");
+        phoneNumber.innerHTML = "HEIGHT: " + info.clientHeight + "PX";
     } else {
         playTruckAppearAnimation();
     }
