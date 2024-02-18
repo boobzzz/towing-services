@@ -317,7 +317,7 @@
 
 
 /*--------------------------------------------------------------------------------------Responsiveness landscape */
-@media (min-width: 480px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 480px) and (max-width: 1023px) and (orientation: landscape) {
     .opening {
         --call-btn-side: 100px;
         flex-direction: unset;
@@ -365,7 +365,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
     .opening {
         --call-btn-side: 120px;
     }
@@ -374,12 +374,12 @@
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1400px) and (orientation: landscape) {
+@media (min-width: 1024px) and (max-width: 1400px) and (orientation: landscape) {
     .opening {
-        --call-btn-side: 180px;
+        --call-btn-side: 160px;
     }
     .info-panel {
-        padding: calc(var(--side-padding) + var(--logo-height)) var(--side-padding) 60px var(--side-padding);
+        padding: calc(var(--side-padding) + var(--logo-height) / 2 + var(--side-padding) / 2) var(--side-padding) var(--side-padding) var(--side-padding);
         font-size: 4.5rem;
     }
     .call-button span {
