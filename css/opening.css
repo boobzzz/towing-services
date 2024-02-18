@@ -1,7 +1,7 @@
 .opening {
     --call-btn-side: 260px;
     position: relative;
-    height: 100dvh;
+    height: 100vh;
 }
 
 .opening::after {
@@ -50,7 +50,7 @@
     align-items: flex-end;
     padding: 180px 100px 20px 0;
     width: 100%;
-    height: 100dvh;
+    height: 100%;
     font-size: 7rem;
     z-index: 2;
 }
@@ -132,66 +132,6 @@
 }
 
 
-/*--------------------------------------------------------------------------------------Animations */
-@keyframes truckSlideInAnimation {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    60% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes infoHeadersSlideInAnimation {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes phoneSlideInAnimation {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes callButtonAppearAnimation {
-    0% {
-        transform: rotate(665deg) scale(0);
-        opacity: 0;
-    }
-    100% {
-        transform: rotate(45deg) scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes callButtonOnTapAnimation {
-    0% {
-        transform: rotate(45deg) scale(1);
-    }
-    50% {
-        transform: rotate(45deg) scale(0.9);
-    }
-    100% {
-        transform: rotate(45deg) scale(1);
-    }
-}
-
-
 /*--------------------------------------------------------------------------------------Responsiveness */
 @media (min-width: 320px) and (max-width: 768px) {
     .opening {
@@ -249,7 +189,6 @@
         --call-btn-side: 160px;
     }
     .info-panel {
-        position: relative;
         font-size: 4rem;
         z-index: 10;
     }
@@ -339,7 +278,7 @@
         flex-direction: row;
         align-items: flex-end;
         padding: var(--side-padding);
-        height: 100%;
+        height: 100vh;
         font-size: 2.5rem;
     }
     .headers {

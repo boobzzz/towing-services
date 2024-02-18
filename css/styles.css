@@ -4,6 +4,7 @@
 @import url("opening.css");
 @import url("slideshow.css");
 @import url("footer.css");
+@import url("animations.css");
 
 
 /* Fonts */
@@ -50,7 +51,7 @@ span, b {
 
 .root {
 	position: relative;
-	height: 100dvh;
+	height: 100vh;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }

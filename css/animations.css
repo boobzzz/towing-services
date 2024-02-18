@@ -1,0 +1,81 @@
+@keyframes truckSlideInAnimation {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes infoHeadersSlideInAnimation {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes phoneSlideInAnimation {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes callButtonAppearAnimation {
+    0% {
+        transform: rotate(665deg) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes callButtonOnTapAnimation {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        transform: rotate(45deg) scale(0.9);
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+@keyframes buttonPulsation {
+    0% {
+        background-color: rgba(0,0,0,0.75);
+    }
+    50% {
+        background-color: rgba(0,0,0,0.5);
+    }
+    100% {
+        background-color: rgba(0,0,0,0.75);
+    }
+}
+
+@keyframes pulsation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

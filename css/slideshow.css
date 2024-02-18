@@ -81,20 +81,6 @@ button {
 }
 
 
-/*--------------------------------------------------------------------------------------Animations */
-@keyframes pulsation {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-
 /*--------------------------------------------------------------------------------------Responsiveness */
 @media (min-width: 320px) and (max-width: 576px) {
     .slideshow::before,

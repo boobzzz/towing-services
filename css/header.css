@@ -151,20 +151,6 @@ header {
 }
 
 
-/*--------------------------------------------------------------------------------------Animations */
-@keyframes buttonPulsation {
-    0% {
-        background-color: rgba(0,0,0,0.75);
-    }
-    50% {
-        background-color: rgba(0,0,0,0.5);
-    }
-    100% {
-        background-color: rgba(0,0,0,0.75);
-    }
-}
-
-
 /*--------------------------------------------------------------------------------------Responsiveness */
 @media (min-width: 320px) and (max-width: 1023px) {
     header {
