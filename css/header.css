@@ -11,8 +11,8 @@ header {
 }
 
 .logo {
-    width: 240px;
-    height: 240px;
+    width: var(--logo-height);
+    height: var(--logo-height);
 }
 
 .logo img {
@@ -170,10 +170,6 @@ header {
     header {
         padding-top: var(--side-padding);
     }
-    .logo {
-        width: 90px;
-        height: 90px;
-    }
     nav {
         position: absolute;
         top: 0;
@@ -234,10 +230,6 @@ header {
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
-    .logo {
-        width: 140px;
-        height: 140px;
-    }
     .menu-toggle {
         height: 39px;
         width: 44px;
@@ -270,10 +262,6 @@ header {
     header {
         padding-top: var(--side-padding);
     }
-    .logo {
-        width: 180px;
-        height: 180px;
-    }
     .menu-toggle {
         height: 52px;
         width: 59px;
@@ -294,10 +282,6 @@ header {
     header {
         padding-top: var(--side-padding);
     }
-    .logo {
-        width: 140px;
-        height: 140px;
-    }
     .menu-item {
         padding:  0 36px;
         height: 80px;
@@ -308,10 +292,6 @@ header {
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
-    .logo {
-        width: 200px;
-        height: 200px;
-    }
     .menu-item {
         padding:  0 36px;
         height: 90px;
@@ -329,10 +309,6 @@ header {
 @media (min-width: 576px) and (max-width: 1023px) and (orientation: landscape) {
     header {
         padding-top: var(--side-padding);
-    }
-    .logo {
-        width: 90px;
-        height: 90px;
     }
     .menu-toggle {
         height: 26px;
@@ -356,9 +332,5 @@ header {
 @media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
     header {
         padding-top: calc(var(--side-padding) / 2);
-    }
-    .logo {
-        width: 120px;
-        height: 120px;
     }
 }

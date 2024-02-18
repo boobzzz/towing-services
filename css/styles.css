@@ -40,6 +40,7 @@ body {
 	--border-1: 1px solid var(--orange);
 	--border-12: 12px solid var(--orange);
 	--border-24: 24px solid var(--orange);
+	--logo-height: 240px;
 }
 
 span, b {
@@ -86,6 +87,7 @@ span, b {
 @media (min-width: 320px) and (max-width: 1024px) {
 	body {
 		--side-padding: 10px;
+		--logo-height: 90px;
 	}
 	.hook {
 		right: 10px;
@@ -93,6 +95,12 @@ span, b {
 	}
 	.hit-area {
 		height: 80px;
+	}
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+	body {
+		--logo-height: 140px;
 	}
 }
 
@@ -111,6 +119,7 @@ span, b {
 @media (min-width: 768px) and (max-width: 1024px) {
 	body {
 		--side-padding: 40px;
+		--logo-height: 180px;
 	}
 	.hook {
 		width: 50px;
@@ -123,6 +132,7 @@ span, b {
 @media (min-width: 1024px) and (max-width: 1200px) {
 	body {
 		--side-padding: 40px;
+		--logo-height: 140px;
 	}
 	.hook {
 		right: 20px;
@@ -136,6 +146,7 @@ span, b {
 @media (min-width: 1200px) and (max-width: 1400px) {
 	body {
 		--side-padding: 60px;
+		--logo-height: 200px;
 	}
 	.hook {
 		right: 20px;
@@ -153,5 +164,18 @@ span, b {
 	}
 	.hit-area {
 		height: 180px;
+	}
+}
+
+/*--------------------------------------------------------------------------------------Responsiveness landscape */
+@media (min-width: 576px) and (max-width: 1023px) and (orientation: landscape) {
+	body {
+		--logo-height: 90px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+	body {
+		--logo-height: 120px;
 	}
 }
